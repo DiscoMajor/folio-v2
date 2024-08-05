@@ -1,14 +1,14 @@
 import Image from "next/image";
-import FigmaIcon from "/public/stackicons/figma.svg";
-import GitIcon from "/public/stackicons/git.svg";
-import JsIcon from "/public/stackicons/js.svg";
-import MysqlIcon from "/public/stackicons/mysql.svg";
-import NextIcon from "/public/stackicons/next.svg";
-import PhpIcon from "/public/stackicons/php.svg";
-import ReactIcon from "/public/stackicons/react.svg";
-import TailwindIcon from "/public/stackicons/tailwind.svg";
-import TrelloIcon from "/public/stackicons/trello.svg";
-import NodeIcon from "/public/stackicons/node.svg";
+import FigmaIcon from "/public/icons/figma.svg";
+import GitIcon from "/public/icons/git.svg";
+import JsIcon from "/public/icons/js.svg";
+import MysqlIcon from "/public/icons/mysql.svg";
+import NextIcon from "/public/icons/next.svg";
+import PhpIcon from "/public/icons/php.svg";
+import ReactIcon from "/public/icons/react.svg";
+import TailwindIcon from "/public/icons/tailwind.svg";
+import TrelloIcon from "/public/icons/trello.svg";
+import NodeIcon from "/public/icons/node.svg";
 import { Monda } from "next/font/google";
 const monda = Monda({ subsets: ["latin"], weight: ["400"] });
 
