@@ -46,12 +46,11 @@ const ToolStackSlider = () => {
             <hr className="w-full h-1/2 bg-white"></hr>
 
             <div className={monda.className}>
-                <p className="font-bold text-lg mx-60 my-12">Tool Stack</p>
+                <p className="font-bold lg:text-2xl sm:text-xl xs:text-lg lg:mx-60 sm:mx-20 xs:mx-8 my-10">Tool Stack</p>
             </div>
 
             <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay">
                 <div ref={sliderRef} className="flex gap-5 whitespace-nowrap overflow-hidden">
-                    {/* Duplicate the content */}
                     {[...Array(8)].map((_, index) => (
                         <React.Fragment key={index}>
                             <Image src={JsIcon} alt="Js" height={74} width={74} />
