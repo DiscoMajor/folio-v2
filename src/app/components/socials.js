@@ -5,7 +5,7 @@ import LinkedinIcon from "/public/icons/linkedin.svg";
 
 export default function SocialsIcons() {
     return (
-        <div className="flex lg:gap-5 absolute lg:right-10 lg:top-10 xs:right-2 xs:top-2 xs:gap-2 xs:p-1 z-1 ">
+        <div className="flex lg:gap-5 absolute lg:right-10 lg:top-10 xs:right-2 xs:top-2 xs:gap-2 xs:p-1 z-20">
             <a href="https://www.linkedin.com/in/victor-lobb%C3%A9-999848296/" target="blank">
                 <Image src={LinkedinIcon} className="size-8 sm:size-8 xs:size-6" alt="Linkedin" height={33} width={33}></Image>
             </a>
