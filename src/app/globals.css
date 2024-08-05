@@ -12,4 +12,22 @@
     font-family: "Montagu Slab", serif;
 }
 
-/* Infinite :horizontal scroller */
+.blur-overlay::before,
+.blur-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%; /* Ajuste la largeur selon tes besoins */
+    background: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 1;
+}
+
+.blur-overlay::before {
+    left: 0;
+}
+
+.blur-overlay::after {
+    right: 0;
+}
