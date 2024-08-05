@@ -23,7 +23,7 @@ const ToolStackSlider = () => {
         const slider = sliderRef.current;
         if (!slider) return;
 
-        const scrollStep = 0.3; //
+        const scrollStep = 0.2; //
         let scrollAmount = 0;
 
         const scroll = () => {
@@ -43,26 +43,24 @@ const ToolStackSlider = () => {
 
     return (
         <main>
-            <hr className="w-full h-1/2 bg-white"></hr>
-
             <div className={monda.className}>
-                <p className="font-bold lg:text-2xl sm:text-xl xs:text-lg lg:mx-60 sm:mx-20 xs:mx-8 my-10">Tool Stack</p>
+                <p className="font-bold lg:text-2xl sm:text-xl xs:text-lg lg:mx-60 sm:mx-20 xs:mx-8 py-10">Tool Stack</p>
             </div>
 
-            <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay">
+            <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay p-5">
                 <div ref={sliderRef} className="flex gap-5 whitespace-nowrap overflow-hidden">
                     {[...Array(8)].map((_, index) => (
                         <React.Fragment key={index}>
-                            <Image src={JsIcon} alt="Js" height={74} width={74} />
-                            <Image src={GitIcon} alt="Git" height={74} width={74} />
-                            <Image src={ReactIcon} alt="ReactJs" height={74} width={74} />
-                            <Image src={NextIcon} alt="NextJs" height={74} width={74} />
-                            <Image src={TrelloIcon} alt="Linkedin" height={74} width={74} />
-                            <Image src={MysqlIcon} alt="MySql" height={74} width={74} />
-                            <Image src={TailwindIcon} alt="Tailwind" height={74} width={74} />
-                            <Image src={PhpIcon} alt="Php" height={74} width={74} />
-                            <Image src={FigmaIcon} alt="Figma" height={74} width={74} />
-                            <Image src={NodeIcon} alt="Node" height={74} width={74} />
+                            <Image src={JsIcon} alt="Js" height={60} width={60} />
+                            <Image src={GitIcon} alt="Git" height={60} width={60} />
+                            <Image src={ReactIcon} alt="ReactJs" height={60} width={60} />
+                            <Image src={NextIcon} alt="NextJs" height={60} width={60} />
+                            <Image src={TrelloIcon} alt="Linkedin" height={60} width={60} />
+                            <Image src={MysqlIcon} alt="MySql" height={60} width={60} />
+                            <Image src={TailwindIcon} alt="Tailwind" height={60} width={60} />
+                            <Image src={PhpIcon} alt="Php" height={60} width={60} />
+                            <Image src={FigmaIcon} alt="Figma" height={60} width={60} />
+                            <Image src={NodeIcon} alt="Node" height={60} width={60} />
                         </React.Fragment>
                     ))}
                 </div>

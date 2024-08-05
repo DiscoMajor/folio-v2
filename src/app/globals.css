@@ -23,29 +23,15 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(10px);
+        transform: translateY(5px);
     }
     100% {
         transform: translateY(0);
     }
 }
 
-/* .blur-overlay::before,
-.blur-overlay::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    background: rgba(15, 15, 15, 0.342);
-    backdrop-filter: blur(8px);
-    z-index: 1;
+.blur-overlay {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
-
-.blur-overlay::before {
-    left: 0;
-}
-
-.blur-overlay::after {
-    right: 0;
-} */

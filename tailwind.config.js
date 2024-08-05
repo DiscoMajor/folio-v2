@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {},
         screens: {
-            xs: "412px",
+            xs: "360px",
             sm: "640px",
             // => @media (min-width: 640px) { ... }
             md: "768px",
@@ -17,7 +17,7 @@ module.exports = {
             // => @media (min-width: 1536px) { ... }
         },
         backgroundImage: {
-            gradientBg: "url('/background/gradient1.svg')",
+            gradientBg: "url('/background/gradient1.jpg')",
         },
     },
     plugins: [],
