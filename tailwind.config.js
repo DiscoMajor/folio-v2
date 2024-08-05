@@ -21,7 +21,7 @@ module.exports = {
             // => @media (min-width: 1536px) { ... }
         },
         backgroundImage: {
-            gradientBg: "url('/background/gradient4.png')",
+            gradientBg: "url('/background/gradient1.svg')",
         },
     },
     plugins: [],
