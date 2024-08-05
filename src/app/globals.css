@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
-body {
-}
-
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -17,3 +11,5 @@ body {
 .montagu-slab {
     font-family: "Montagu Slab", serif;
 }
+
+/* Infinite :horizontal scroller */
