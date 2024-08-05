@@ -2,14 +2,14 @@
 import { useState, useEffect } from "react";
 
 const backgrounds = [
-    "url('./gradient.png')",
-    "url('./gradient3.png')",
-    "url('./gradient4.png')",
-    "url('./gradient5.png')",
-    "url('./gradient6.png')",
-    "url('./gradient7.png')",
-    "url('./gradient8.png')",
-    "url('./gradient9.png')",
+    "url('./backgrounds/gradient.png')",
+    "url('./backgrounds/gradient3.png')",
+    "url('./backgrounds/gradient4.png')",
+    "url('./backgrounds/gradient5.png')",
+    "url('./backgrounds/gradient6.png')",
+    "url('./backgrounds/gradient7.png')",
+    "url('./backgrounds/gradient8.png')",
+    "url('./backgrounds/gradient9.png')",
 ];
 
 const getRandomBackground = (currentBackground) => {
