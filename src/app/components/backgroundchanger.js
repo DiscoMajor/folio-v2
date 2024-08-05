@@ -12,6 +12,13 @@ const backgrounds = [
     "url('./backgrounds/gradient9.png')",
 ];
 
+const preloadImages = (imageUrls) => {
+    imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+    });
+};
+
 const getRandomBackground = (currentBackground) => {
     let newBackground;
     do {
@@ -26,6 +33,9 @@ const BackgroundChanger = ({ children }) => {
     const changeInterval = 5000;
 
     useEffect(() => {
+        // Preload images
+        preloadImages(backgrounds);
+
         const intervalId = setInterval(() => {
             setBackground((prevBackground) => getRandomBackground(prevBackground));
         }, changeInterval);
@@ -54,7 +64,7 @@ const styles = {
         height: "100%",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        transition: "background-image 1s ease-in-out",
+        transition: "background-image 2s ease-in-out",
         zIndex: -1,
     },
     content: {
