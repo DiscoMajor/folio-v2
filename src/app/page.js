@@ -6,6 +6,7 @@ import ToolStack from "./components/toolstack.js";
 import SocialsIcons from "./components/socials.js";
 import Alternance from "./components/alternance.js";
 import ArrowDown from "/public/icons/arrowdown.svg";
+import Projets from "./components/projets.js";
 
 const montagu = Montagu_Slab({ subsets: ["latin"] });
 const monda = Monda({ subsets: ["latin"], weight: ["400"] });
@@ -28,8 +29,13 @@ export default function Home() {
                 <hr className="w-full h-1/2 bg-white opacity-45"></hr>
                 <ToolStack></ToolStack>
 
-                <div className="flex justify-center arrow-down p-5">
-                    <Image src={ArrowDown} alt="ArrowDown" height={25} width={25}></Image>
+                <div className="flex justify-center arrow-down p-5 mt-10">
+                    <a href="#projets">
+                        <Image src={ArrowDown} alt="ArrowDown" height={25} width={25}></Image>
+                    </a>
+                </div>
+                <div class="h-screen ">
+                    <Projets></Projets>
                 </div>
             </div>
         </main>

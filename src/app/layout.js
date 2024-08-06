@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className="overflow-y-scroll no-scrollbar">
-            <body className="bg-gradientBg bg-auto ">{children}</body>
+        <html lang="en" className="overflow-y-scroll no-scrollbar scroll-smooth">
+            <body>{children}</body>
         </html>
     );
 }
