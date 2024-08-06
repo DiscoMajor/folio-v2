@@ -15,7 +15,7 @@ export default function Home() {
         <main className="relative text-white bg-gradientBg bg-cover">
             <SocialsIcons></SocialsIcons>
             <div className={montagu.className}>
-                <h1 className="text-center lg:text-9xl sm:text-7xl xs:text-5xl lg:mx-20 sm:mx-16 xs:mx-10 lg:py-20 sm:py-20 xs:py-12 animate__animated animate__fadeInDown">
+                <h1 className="text-center xl:text-8xl sm:text-7xl xs:text-4xl lg:mx-20 sm:mx-16 lg:py-10 sm:py-20 xs:py-10  animate__animated animate__fadeInDown">
                     Victor Lobbé
                 </h1>
             </div>

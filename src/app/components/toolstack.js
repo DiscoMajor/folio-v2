@@ -44,23 +44,23 @@ const ToolStackSlider = () => {
     return (
         <main>
             <div className={monda.className}>
-                <p className="font-bold lg:text-2xl sm:text-xl xs:text-lg lg:mx-60 sm:mx-20 xs:mx-8 py-10">Tool Stack</p>
+                <p className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">Tool Stack</p>
             </div>
 
-            <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay p-5">
-                <div ref={sliderRef} className="flex gap-5 whitespace-nowrap overflow-hidden">
+            <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay p-2">
+                <div ref={sliderRef} className="flex xl:gap-5 xs:gap-3 overflow-hidden">
                     {[...Array(8)].map((_, index) => (
                         <React.Fragment key={index}>
-                            <Image src={JsIcon} alt="Js" height={60} width={60} />
-                            <Image src={GitIcon} alt="Git" height={60} width={60} />
-                            <Image src={ReactIcon} alt="ReactJs" height={60} width={60} />
-                            <Image src={NextIcon} alt="NextJs" height={60} width={60} />
-                            <Image src={TrelloIcon} alt="Linkedin" height={60} width={60} />
-                            <Image src={MysqlIcon} alt="MySql" height={60} width={60} />
-                            <Image src={TailwindIcon} alt="Tailwind" height={60} width={60} />
-                            <Image src={PhpIcon} alt="Php" height={60} width={60} />
-                            <Image src={FigmaIcon} alt="Figma" height={60} width={60} />
-                            <Image src={NodeIcon} alt="Node" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={JsIcon} alt="Js" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={GitIcon} alt="Git" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={ReactIcon} alt="ReactJs" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={NextIcon} alt="NextJs" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={TrelloIcon} alt="Linkedin" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={MysqlIcon} alt="MySql" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={TailwindIcon} alt="Tailwind" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={PhpIcon} alt="Php" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={FigmaIcon} alt="Figma" height={60} width={60} />
+                            <Image className="xl:size-[60px] xs:size-[52px]" src={NodeIcon} alt="Node" height={60} width={60} />
                         </React.Fragment>
                     ))}
                 </div>
