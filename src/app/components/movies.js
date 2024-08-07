@@ -7,7 +7,7 @@ export default function Movie() {
 
     useEffect(() => {
         const getData = async () => {
-            const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+            const apiKey = process.env.NEXT_PUBLIC_TMDB;
             const query = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`);
             const response = await query.json();
             setMovieList(response.results);
