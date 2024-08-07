@@ -11,10 +11,9 @@ import PhpIcon from "/public/icons/php.svg";
 import ReactIcon from "/public/icons/react.svg";
 import TailwindIcon from "/public/icons/tailwind.svg";
 import TrelloIcon from "/public/icons/trello.svg";
-import NodeIcon from "/public/icons/node.svg";
-import { Monda } from "next/font/google";
+import ApiIcon from "/public/icons/apifetch.svg";
 
-const monda = Monda({ subsets: ["latin"], weight: ["400"] });
+const icons = [JsIcon, GitIcon, ReactIcon, NextIcon, TrelloIcon, MysqlIcon, TailwindIcon, PhpIcon, FigmaIcon, ApiIcon];
 
 const ToolStackSlider = () => {
     const sliderRef = useRef(null);
@@ -23,7 +22,7 @@ const ToolStackSlider = () => {
         const slider = sliderRef.current;
         if (!slider) return;
 
-        const scrollStep = 0.2; //
+        const scrollStep = 0.2;
         let scrollAmount = 0;
 
         const scroll = () => {
@@ -43,26 +42,22 @@ const ToolStackSlider = () => {
 
     return (
         <main>
-            <div className={monda.className}>
-                <p className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">Tool Stack</p>
-            </div>
+            <div className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">Tool Stack</div>
 
             <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay p-2">
                 <div ref={sliderRef} className="flex xl:gap-5 xs:gap-3 overflow-hidden">
-                    {[...Array(8)].map((_, index) => (
-                        <React.Fragment key={index}>
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={JsIcon} alt="Js" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={GitIcon} alt="Git" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={ReactIcon} alt="ReactJs" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={NextIcon} alt="NextJs" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={TrelloIcon} alt="Linkedin" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={MysqlIcon} alt="MySql" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={TailwindIcon} alt="Tailwind" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={PhpIcon} alt="Php" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={FigmaIcon} alt="Figma" height={60} width={60} />
-                            <Image className="xl:size-[60px] xs:size-[52px]" src={NodeIcon} alt="Node" height={60} width={60} />
-                        </React.Fragment>
-                    ))}
+                    {[...Array(8)].flatMap((_, index) =>
+                        icons.map((icon, idx) => (
+                            <Image
+                                key={`${index}-${idx}`}
+                                className="xl:size-[60px] xs:size-[52px]"
+                                src={icon}
+                                alt={`Icon ${index}-${idx}`}
+                                height={60}
+                                width={60}
+                            />
+                        ))
+                    )}
                 </div>
             </div>
         </main>
