@@ -23,7 +23,7 @@ export default function Home() {
             <div className={monda.className}>
                 <Alternance />
 
-                <hr className="w-full h-1/2 bg-white opacity-45"></hr>
+                <hr className="w-full h-1/2 bg-white opacity-20"></hr>
                 <ToolStack />
 
                 <a className="flex justify-center arrow-down lg:p-10 xs:p-5">
