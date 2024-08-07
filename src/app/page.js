@@ -6,8 +6,6 @@ import ToolStack from "./components/toolstack.js";
 import SocialsIcons from "./components/socials.js";
 import Alternance from "./components/alternance.js";
 import ArrowDown from "/public/icons/arrowdown.svg";
-import Projets from "./components/projets.js";
-import Movie from "./components/movies.js";
 
 const montagu = Montagu_Slab({ subsets: ["latin"] });
 const monda = Monda({ subsets: ["latin"], weight: ["400"] });
@@ -28,13 +26,17 @@ export default function Home() {
                 <hr className="w-full h-1/2 bg-white opacity-45"></hr>
                 <ToolStack />
 
-                <a href="#test" className="flex justify-center arrow-down lg:p-10 xs:p-5">
+                <a className="flex justify-center arrow-down lg:p-10 xs:p-5">
                     <Image src={ArrowDown} alt="ArrowDown" />
                 </a>
             </div>
-            <div class="h-screen relative">
-                <Projets />
-                <Movie />
+            <div className="h-screen relative font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
+                <div className={monda.className}>
+                    <h1 className="text-center p-5 text-5xl font-bold">Projets</h1>
+                    <a href="tmdb-api" className="text-white hover:translate-y-5 font-semibold">
+                        The Movie Database API Project
+                    </a>
+                </div>
             </div>
         </main>
     );

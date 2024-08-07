@@ -8,6 +8,9 @@ module.exports = {
                 52: "52px",
                 5.2: "82px",
             },
+            fontFamily: {
+                monda: ["Monda", "sans-serif"],
+            },
         },
         screens: {
             xs: "360px",
