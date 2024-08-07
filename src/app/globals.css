@@ -25,6 +25,7 @@
 
 .arrow-down {
     animation: moveDown 1.5s ease-in-out infinite;
+    height: auto;
 }
 
 @keyframes moveDown {
@@ -45,4 +46,13 @@
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #d1949418;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 220px;
 }
