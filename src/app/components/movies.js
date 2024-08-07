@@ -10,7 +10,6 @@ export default function Movie() {
             const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
             const query = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`);
             const response = await query.json();
-            console.log(`console log :`, response);
             setMovieList(response.results);
         };
         getData();
