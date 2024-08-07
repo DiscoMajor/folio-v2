@@ -37,7 +37,7 @@ export default function Home() {
                 </div>
                 <div class="h-screen">
                     <Projets></Projets>
-                    {/* <Movie></Movie> */}
+                    <Movie></Movie>
                 </div>
             </div>
         </main>
