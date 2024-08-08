@@ -11,6 +11,12 @@ module.exports = {
             fontFamily: {
                 monda: ["Monda", "sans-serif"],
             },
+            height: {
+                475: "475px",
+            },
+            width: {
+                320: "320px",
+            },
         },
         screens: {
             xs: "360px",
@@ -22,7 +28,7 @@ module.exports = {
             // => @media (min-width: 1024px) { ... }
             xl: "1280px",
             // => @media (min-width: 1280px) { ... }
-            "2xl": "1536px",
+            xxl: "1536px",
             // => @media (min-width: 1536px) { ... }
         },
         backgroundImage: {

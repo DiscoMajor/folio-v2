@@ -12,8 +12,8 @@ const monda = Monda({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
     return (
-        <main className="relative text-white h-screen">
-            <section className="bg-gradientBg bg-cover ">
+        <main className=" text-white">
+            <section className="bg-gradientBg bg-cover relative h-screen">
                 <SocialsIcons />
                 <div className={montagu.className}>
                     <h1 className="text-center xl:text-9xl sm:text-7xl xs:text-4xl lg:mx-20 sm:mx-16 lg:py-10 sm:py-20 xs:py-10  animate__animated animate__fadeInDown">
@@ -33,8 +33,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-gradientBg2 bg-cover">
-                <div className="h-screen relative font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12 ">
+            <section className="bg-gradientBg2 bg-cover relative h-screen">
+                <div className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
                     <div className={monda.className}>
                         <h1 className="text-center p-5 text-5xl font-bold">Projets</h1>
                         <a href="tmdb-api" className="text-white hover:translate-y-5 font-semibold">
