@@ -23,21 +23,20 @@ export default function Home() {
 
                 <div className={monda.className}>
                     <Alternance />
-
                     <hr className="w-full h-1/2 bg-white opacity-20"></hr>
                     <ToolStack />
-
-                    <button className="mx-auto arrow-down lg:p-10 xs:p-5">
+                    <div className="mx-auto arrow-down lg:p-12 xs:p-5">
                         <Image src={ArrowDown} alt="ArrowDown" />
-                    </button>
+                    </div>
                 </div>
             </section>
 
             <section className="bg-gradientBg2 bg-cover relative h-screen">
-                <div className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
-                    <div className={monda.className}>
-                        <h1 className="text-center p-5 text-5xl font-bold">Projets</h1>
-                        <a href="tmdb-api" className="text-white hover:translate-y-5 font-semibold">
+                <div className={monda.className}>
+                    <h1 className="text-center text-5xl font-bold p-12">Projets</h1>
+                    <hr className="w-full h-1/2 bg-white opacity-20"></hr>
+                    <div className="xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
+                        <a href="tmdb-api" className="text-white font-semibold">
                             The Movie Database API Project
                         </a>
                     </div>

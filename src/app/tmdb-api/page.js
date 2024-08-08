@@ -50,8 +50,8 @@ export default function Movie() {
                 </div>
             </section>
 
-            <section className="mx-10 p-5">
-                <h1 className="text-2xl p-10 font-bold text-center ">Upcoming Section</h1>
+            <section className="mx-10">
+                <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section</h1>
                 <div className="grid xxl:grid-cols-4 xxl:gap-14 xl:grid-cols-3 xl:gap-14 lg:grid-cols-3 lg:gap-14 md:grid-cols-2 md:gap-10 sm:grid-cols-2 sm:gap-8 xs:gap-5 justify-items-center">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                         <div
