@@ -43,7 +43,6 @@ const ToolStackSlider = () => {
     return (
         <main>
             <div className="font-bold lg:text-2xl sm:text-xl xs:text-md xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">Tool Stack</div>
-
             <div className="relative overflow-hidden max-w-[600px] mx-auto blur-overlay p-2">
                 <div ref={sliderRef} className="flex xl:gap-5 xs:gap-3 overflow-hidden">
                     {[...Array(8)].flatMap((_, index) =>

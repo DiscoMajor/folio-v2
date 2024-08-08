@@ -27,6 +27,7 @@ module.exports = {
         },
         backgroundImage: {
             gradientBg: "url('/background/gradient1.jpg')",
+            gradientBg2: "url('/background/gradient2.jpg')",
         },
     },
     plugins: [],

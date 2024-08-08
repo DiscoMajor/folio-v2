@@ -26,6 +26,8 @@
 .arrow-down {
     animation: moveDown 1.5s ease-in-out infinite;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes moveDown {
