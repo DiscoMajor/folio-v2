@@ -73,7 +73,7 @@ export default function Movie() {
 
             <section className="mx-10 py-10">
                 <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section</h1>
-                <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center">
+                <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                         <div key={UpcomingMovie.id} className="flex flex-col gap-2">
                             <div
