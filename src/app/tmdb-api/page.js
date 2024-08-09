@@ -84,7 +84,7 @@ export default function Movie() {
                                     backgroundPosition: "center",
                                 }}
                             >
-                                <div className="flex flex-col justify-center items-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <div className="flex flex-col justify-center items-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <p>{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
                                 </div>
 
