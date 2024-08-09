@@ -52,21 +52,31 @@ export default function Movie() {
 
             <section className="mx-10">
                 <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section</h1>
-                <div className="grid xxl:grid-cols-4 xxl:gap-14 xl:grid-cols-3 xl:gap-14 lg:grid-cols-3 lg:gap-14 md:grid-cols-2 md:gap-10 sm:grid-cols-2 sm:gap-8 xs:gap-5 justify-items-center">
+                <div className="grid justify-items-center gap-5 xs:gap-5 sm:gap-8 md:gap-10 lg:gap-14 xl:gap-14 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xxl:grid-cols-4 justify-center">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
-                        <div
-                            key={UpcomingMovie.id}
-                            className="w-[320px] h-[475px] rounded-md flex flex-col justify-end text-white"
-                            style={{
-                                backgroundImage: `url(https://image.tmdb.org/t/p/w500${UpcomingMovie.poster_path})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
-                        >
-                            <div className="bg-black bg-opacity-50 p-2 rounded">
-                                <h2>{UpcomingMovie.title}</h2>
-                                <p>Release Date: {UpcomingMovie.release_date}</p>
-                                <p>Rating: {UpcomingMovie.vote_average}</p>
+                        <div key={UpcomingMovie.id} className="flex flex-col gap-2">
+                            <div
+                                className="w-[320px] h-[475px] rounded-md text-white relative group"
+                                style={{
+                                    backgroundImage: `url(https://image.tmdb.org/t/p/w500${UpcomingMovie.poster_path})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            >
+                                <div className="flex flex-col justify-center items-center absolute bottom-0 w-full h-24 bg-slate-700 bg-opacity-50 p-2 rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <p className="text-sm font-semibold">Genre ;</p>
+                                    <p className="text-sm font-semibold">Durée ?</p>
+                                    <p className="text-sm font-semibold">Pays ?</p>
+                                </div>
+
+                                <div className="text-sm bg-slate-300 bg-opacity-50 rounded p-2 absolute top-3 left-3 ">
+                                    <p>Score : {UpcomingMovie.vote_average}</p>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col gap-3 items-center">
+                                <h2 className="text-base font-semibold">{UpcomingMovie.title}</h2>
+                                <p className="text-sm text-gray-400">Release Date: {UpcomingMovie.release_date}</p>
                             </div>
                         </div>
                     ))}
