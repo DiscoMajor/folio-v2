@@ -12,8 +12,8 @@ const monda = Monda({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
     return (
-        <main className=" text-white">
-            <section className="bg-gradientBg bg-cover relative h-screen">
+        <main className=" text-white h-screen">
+            <section className="bg-gradientBg bg-cover relative">
                 <SocialsIcons />
                 <div className={montagu.className}>
                     <h1 className="text-center xl:text-9xl sm:text-7xl xs:text-4xl lg:mx-20 sm:mx-16 lg:py-10 sm:py-20 xs:py-10  animate__animated animate__fadeInDown">
