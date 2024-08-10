@@ -7,7 +7,7 @@ const projects = [
         id: 2,
         name: "bibliotheque-crud",
         title: "Bibliothèque de livres",
-        description: "Gestion de bibliothèque CRUD, Filtrage recherche",
+        description: "Gestion CRUD, Filtrage des recherches",
         keyword: "#NodeJs",
     },
 ];
