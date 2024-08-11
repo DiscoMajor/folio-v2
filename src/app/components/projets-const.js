@@ -2,13 +2,21 @@ import React from "react";
 import ProjectCard from "./projets-cards.js";
 
 const projects = [
-    { id: 1, name: "tmdb-api", title: "The movie database", description: "Manipulation de l'API", keyword: "#Api" },
+    {
+        id: 1,
+        name: "tmdb-api",
+        title: "The movie database",
+        description: "Manipulation de l'API",
+        keyword: "#Api",
+        img: "/icons/movie-icon.svg",
+    },
     {
         id: 2,
         name: "bibliotheque-crud",
         title: "Bibliothèque de livres",
         description: "Gestion CRUD, Filtrage des recherches",
         keyword: "#NodeJs",
+        img: "/icons/book-icon.svg",
     },
 ];
 
@@ -23,6 +31,7 @@ const Projects = () => {
                     id={projet.id}
                     description={projet.description}
                     keyword={projet.keyword}
+                    img={projet.img}
                 />
             ))}
         </div>
