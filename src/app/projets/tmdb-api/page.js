@@ -51,28 +51,8 @@ export default function Movie() {
 
     return (
         <div className="text-black bg-slate-50 relative">
-            <section>
-                <h1 className="text-2xl p-10 font-bold text-center">Discover Section</h1>
-                <div className="flex justify-center flex-wrap gap-5 p-5">
-                    {discoverMovieList.slice(0, 3).map((discoverMovie) => (
-                        <div key={discoverMovie.id} className="flex flex-col  bg-slate-400 p-5 rounded-md max-w-80 gap-3">
-                            <Image
-                                src={`https://image.tmdb.org/t/p/w500${discoverMovie.poster_path}`}
-                                width={200}
-                                height={300}
-                                alt={discoverMovie.title}
-                            />
-                            <h2>{discoverMovie.title}</h2>
-                            <p>Release Date: {discoverMovie.release_date}</p>
-                            <p>Rating: {discoverMovie.vote_average}</p>
-                            <p>{discoverMovie.original_language}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
             <section className="mx-10 py-10">
-                <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section</h1>
+                <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section (en construction)</h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                         <div key={UpcomingMovie.id} className="flex flex-col gap-2">
@@ -97,6 +77,26 @@ export default function Movie() {
                                 <h2 className="text-base font-semibold  text-center">{UpcomingMovie.title}</h2>
                                 <p className="text-sm text-gray-400">Date de sortie : {UpcomingMovie.release_date}</p>
                             </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section>
+                <h1 className="text-2xl p-10 font-bold text-center">Discover Section (en construction)</h1>
+                <div className="flex justify-center flex-wrap gap-5 p-5">
+                    {discoverMovieList.slice(0, 3).map((discoverMovie) => (
+                        <div key={discoverMovie.id} className="flex flex-col  bg-slate-400 p-5 rounded-md max-w-80 gap-3">
+                            <Image
+                                src={`https://image.tmdb.org/t/p/w500${discoverMovie.poster_path}`}
+                                width={200}
+                                height={300}
+                                alt={discoverMovie.title}
+                            />
+                            <h2>{discoverMovie.title}</h2>
+                            <p>Release Date: {discoverMovie.release_date}</p>
+                            <p>Rating: {discoverMovie.vote_average}</p>
+                            <p>{discoverMovie.original_language}</p>
                         </div>
                     ))}
                 </div>
