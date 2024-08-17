@@ -10,14 +10,15 @@ const projects = [
         keyword: "#Api",
         img: "/icons/movie-icon.svg",
     },
-    {
-        id: 2,
-        name: "bibliotheque-crud",
-        title: "Bibliothèque de livres",
-        description: "Gestion CRUD, Filtrage des recherches",
-        keyword: "#NodeJs",
-        img: "/icons/book-icon.svg",
-    },
+    // ,
+    // {
+    //     id: 2,
+    //     name: "bibliotheque-crud",
+    //     title: "Bibliothèque de livres",
+    //     description: "Gestion CRUD, Filtrage des recherches",
+    //     keyword: "#NodeJs",
+    //     img: "/icons/book-icon.svg",
+    // },
 ];
 
 const Projects = () => {
