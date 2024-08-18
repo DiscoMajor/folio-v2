@@ -1,5 +1,6 @@
 import { Monda } from "next/font/google";
 const monda = Monda({ subsets: ["latin"], weight: ["400"] });
+import Link from "next/link";
 
 export default function Alternance() {
     return (
@@ -18,11 +19,16 @@ export default function Alternance() {
             <hr className="w-full h-1/2 bg-white opacity-20"></hr>
 
             <div className={monda.className}>
-                <p className="xl:text-base xs:text-sm xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12 xl:leading-10 xs:leading-6 ">
+                <p className="xl:text-base xs:text-sm xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 px-12 pt-12 pb-3 xl:leading-10 xs:leading-6 ">
                     Je suis curieux et créatif. Je passe beaucoup de temps à me tenir au courant des dernières tendances, des technologies
                     actuelles, et des innovations en matière de design. Même si j'aime apprendre de nouveaux langages, je souhaite vraiment
                     me spécialiser davantage.
                 </p>
+                <div className="xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 px-12 pb-12 text-xs underline">
+                    <Link href="/files/cv_lm_victor_lobbe.pdf" download="cv_lm_victor_lobbe.pdf" target="blank">
+                        Télécharger mon CV
+                    </Link>
+                </div>
             </div>
         </main>
     );
