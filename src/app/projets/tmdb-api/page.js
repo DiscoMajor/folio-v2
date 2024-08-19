@@ -51,7 +51,7 @@ export default function Movie() {
 
     return (
         <div className="text-black bg-slate-50 relative">
-            <section className="mx-10 py-10">
+            <section className="mx-10">
                 <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section (en construction)</h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
@@ -64,7 +64,7 @@ export default function Movie() {
                                     backgroundPosition: "center",
                                 }}
                             >
-                                <div className="flex flex-col justify-center items-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <div className="flex flex-col justify-center items-center text-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <p>{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
                                 </div>
 
