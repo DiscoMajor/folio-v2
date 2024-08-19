@@ -9,11 +9,11 @@ const ProjectCard = ({ title, name, description, keyword, img }) => {
             <div className="card hover:-translate-y-1 duration-300 ease-in-out bg-white">
                 <section className="z-50 relative">
                     <div className="px-6 py-4">
-                        <div className="text-gray-600 font-bold xl:text-xl xs:text-lg mb-2">{title}</div>
-                        <p className="text-gray-500 xl:text-base xs:text-sm pt-3">{description}</p>
+                        <div className="text-white font-bold xl:text-xl xs:text-lg mb-2">{title}</div>
+                        <p className="text-gray-300 xl:text-base xs:text-sm pt-3">{description}</p>
 
                         <div className="pt-6 ">
-                            <span className="inline-block bg-gray-200 rounded-full lg:text-sm xs:text-xs font-semibold text-gray-700 mr-2 mb-2 px-3 py-1 ">
+                            <span className="inline-block bg-gray-300 rounded-full lg:text-sm xs:text-xs font-semibold text-gray-700 mr-2 mb-2 px-3 py-1 ">
                                 {keyword}
                             </span>
                         </div>

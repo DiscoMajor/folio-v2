@@ -56,34 +56,36 @@ export default function Movie() {
     }, []);
 
     return (
-        <div className="text-black bg-slate-50 relative">
+        <div className=" bg-slate-50 relative">
             <section className="mx-10">
-                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>
-                    Upcoming Section (en construction)
-                </h1>
+                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Upcoming Section</h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
-                        <div key={UpcomingMovie.id} className="flex flex-col gap-2">
+                        <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-100 xs:scale-90">
                             <div
-                                className="w-[320px] h-[475px] rounded-md text-white relative group"
+                                className="w-[320px] h-[475px] rounded-md text-white relative group overflow-hidden"
                                 style={{
                                     backgroundImage: `url(https://image.tmdb.org/t/p/w500${UpcomingMovie.poster_path})`,
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
                                 }}
                             >
+                                <div
+                                    className="movie-poster-zoom"
+                                    style={{
+                                        backgroundImage: `url(https://image.tmdb.org/t/p/w500${UpcomingMovie.poster_path})`,
+                                    }}
+                                ></div>
                                 <div className="flex flex-col justify-center items-center text-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <p className="text-sm font-semibold">{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
                                 </div>
 
-                                <div className=" bg-slate-200 bg-opacity-50 rounded p-2 absolute top-3 left-3 ">
+                                <div className=" bg-slate-50 bg-opacity-60 rounded p-2 absolute top-3 left-3 ">
                                     <p className="text-sm font-semibold text-black">Score : {UpcomingMovie.vote_average}</p>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col gap-3 items-center max-w-72">
+                            <div className="flex flex-col gap-1 items-center max-w-72">
                                 <h2 className={`text-lg  text-center ${jersey.className}`}>{UpcomingMovie.title}</h2>
-                                <p className="text-sm text-gray-400">Date de sortie : {UpcomingMovie.release_date}</p>
+                                <p className="text-sm text-gray-400">Release date : {UpcomingMovie.release_date}</p>
                             </div>
                         </div>
                     ))}
