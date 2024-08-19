@@ -25,8 +25,14 @@ export default function SocialsIcons() {
     return (
         <div className="flex absolute xl:gap-5 xs:gap-2 xl:right-8 xl:top-6 sm:right-8 sm:top-6 xs:right-1 xs:top-1 xs:p-1 z-20">
             {socialLinks.map(({ href, src, alt }) => (
-                <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-                    <Image src={src} className="size-8 sm:size-8 xs:size-6" alt={alt} height={33} width={33} />
+                <a key={alt} href={href} target="_blank">
+                    <Image
+                        src={src}
+                        className="size-8 sm:size-8 xs:size-6  xl:hover:scale-110 transition ease-in-out duration-300"
+                        alt={alt}
+                        height={33}
+                        width={33}
+                    />
                 </a>
             ))}
         </div>

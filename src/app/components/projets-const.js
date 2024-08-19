@@ -23,7 +23,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="flex flex-col gap-5 xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
+        <div className="flex flex-col gap-6 xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
             {projects.map((projet) => (
                 <ProjectCard
                     key={projet.id}
