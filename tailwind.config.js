@@ -10,6 +10,7 @@ module.exports = {
             },
             fontFamily: {
                 monda: ["Monda", "sans-serif"],
+                jersey: ["Jersey 10", "sans-serif"],
             },
             height: {
                 475: "475px",

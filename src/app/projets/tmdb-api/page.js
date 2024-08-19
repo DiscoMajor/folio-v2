@@ -2,6 +2,12 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+import { Bebas_Neue } from "next/font/google";
+import { Bungee } from "next/font/google";
+
+const jersey = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
+
 export default function Movie() {
     const [discoverMovieList, setdiscoverMovieList] = useState([]);
     const [UpcomingMoviesList, setUpcomingMoviesList] = useState([]);
@@ -52,7 +58,9 @@ export default function Movie() {
     return (
         <div className="text-black bg-slate-50 relative">
             <section className="mx-10">
-                <h1 className="text-2xl p-10 font-bold text-center">Upcoming Section (en construction)</h1>
+                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>
+                    Upcoming Section (en construction)
+                </h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                         <div key={UpcomingMovie.id} className="flex flex-col gap-2">
@@ -65,16 +73,16 @@ export default function Movie() {
                                 }}
                             >
                                 <div className="flex flex-col justify-center items-center text-center absolute bottom-0 w-full h-20 bg-slate-700 bg-opacity-50 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                                    <p>{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
+                                    <p className="text-sm font-semibold">{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
                                 </div>
 
-                                <div className="text-sm bg-slate-300 bg-opacity-50 rounded p-2 absolute top-3 left-3 ">
-                                    <p>Score : {UpcomingMovie.vote_average}</p>
+                                <div className=" bg-slate-200 bg-opacity-50 rounded p-2 absolute top-3 left-3 ">
+                                    <p className="text-sm font-semibold text-black">Score : {UpcomingMovie.vote_average}</p>
                                 </div>
                             </div>
 
                             <div className="flex flex-col gap-3 items-center max-w-72">
-                                <h2 className="text-base font-semibold  text-center">{UpcomingMovie.title}</h2>
+                                <h2 className={`text-xl font-semibold  text-center ${jersey.className}`}>{UpcomingMovie.title}</h2>
                                 <p className="text-sm text-gray-400">Date de sortie : {UpcomingMovie.release_date}</p>
                             </div>
                         </div>

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata = {
-    title: "Victor's Folio",
+    title: "Victor's PortFolio",
     description: "Next JS APP",
 };
 
