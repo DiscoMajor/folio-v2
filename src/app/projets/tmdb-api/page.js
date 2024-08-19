@@ -82,7 +82,7 @@ export default function Movie() {
                             </div>
 
                             <div className="flex flex-col gap-3 items-center max-w-72">
-                                <h2 className={`text-xl font-semibold  text-center ${jersey.className}`}>{UpcomingMovie.title}</h2>
+                                <h2 className={`text-lg  text-center ${jersey.className}`}>{UpcomingMovie.title}</h2>
                                 <p className="text-sm text-gray-400">Date de sortie : {UpcomingMovie.release_date}</p>
                             </div>
                         </div>
