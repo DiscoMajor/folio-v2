@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
     title: "Victor's PortFolio",
-    description: "Next JS APP",
+    description: "PortFolio NextJS et TailwindCSS",
 };
 
 export default function RootLayout({ children }) {
