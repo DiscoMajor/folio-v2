@@ -79,13 +79,13 @@ export default function Movie() {
                                 </div>
 
                                 <div className=" bg-slate-50 bg-opacity-60 rounded p-2 absolute top-3 left-3 ">
-                                    <p className="text-sm font-semibold text-black">Score : {UpcomingMovie.vote_average}</p>
+                                    <p className="text-sm font-semibold text-black">⭐ {UpcomingMovie.vote_average}</p>
                                 </div>
                             </div>
 
                             <div className="flex flex-col gap-1 items-center max-w-72">
                                 <h2 className={`text-lg  text-center ${jersey.className}`}>{UpcomingMovie.title}</h2>
-                                <p className="text-sm text-gray-400">Release date : {UpcomingMovie.release_date}</p>
+                                <p className="text-sm text-gray-400">📅 {UpcomingMovie.release_date}</p>
                             </div>
                         </div>
                     ))}
@@ -105,18 +105,17 @@ export default function Movie() {
                                     className="object-cover"
                                 />
                             </div>
-                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-5 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
                                 <h2 className={`absolute top-10 xl:text-6xl xs:text-4xl text-center ${jersey.className}`}>
                                     {discoverMovie.title}
                                 </h2>
-                                <p className="xl:p-10 xs:p-2 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-6">
+                                <p className="xl:p-10 xs:p-2 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-6 font-semibold ">
                                     {discoverMovie.overview}
                                 </p>
-                                <div
-                                    className={`absolute xl:bottom-10 xs:bottom-5 p-3 bg-zinc-800 rounded-md xl:leading-8 xs:leading-5 xs:text-sm xl:text-base bg-opacity-80`}
-                                >
-                                    <p>Release: {discoverMovie.release_date}</p>
-                                    <p>Rating: {discoverMovie.vote_average}</p>
+                                <div className={`absolute xl:bottom-5 xs:bottom-5 p-3  xl:leading-8 xs:leading-5 xl:text-base xs:text-xs`}>
+                                    <p>📅 {discoverMovie.release_date}</p>
+                                    <p>⭐ {discoverMovie.vote_average}</p>
+                                    <p>🎭 {getGenreNames(discoverMovie.genre_ids).join(", ")}</p>
                                 </div>
                             </div>
                         </div>

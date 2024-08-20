@@ -1,5 +1,5 @@
 import { Montagu_Slab } from "next/font/google";
-const montagu = Montagu_Slab({ subsets: ["latin"] });
+const montagu = Montagu_Slab({ subsets: ["latin"], display: "swap", adjustFontFallback: false });
 
 export default function MyName() {
     return (
