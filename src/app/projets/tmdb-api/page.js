@@ -109,7 +109,7 @@ export default function Movie() {
                                 <h2 className={`absolute top-10 xl:text-6xl xs:text-4xl text-center ${jersey.className}`}>
                                     {discoverMovie.title}
                                 </h2>
-                                <p className="p-10 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-5">
+                                <p className="xl:p-10 xs:p-2 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-6">
                                     {discoverMovie.overview}
                                 </p>
                                 <div
