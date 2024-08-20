@@ -93,7 +93,7 @@ export default function Movie() {
             </section>
 
             <section>
-                <h1 className="text-2xl p-10 font-bold text-center">Discover Section (en construction)</h1>
+                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Discover Section</h1>
                 <div className="flex justify-center flex-wrap gap-5 p-5">
                     {discoverMovieList.slice(0, 3).map((discoverMovie) => (
                         <div key={discoverMovie.id} className="flex flex-col  bg-slate-400 p-5 rounded-md max-w-80 gap-3">
