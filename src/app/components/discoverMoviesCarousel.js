@@ -52,10 +52,10 @@ const Carousel = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + discoverMovieList.length) % discoverMovieList.length);
     };
 
-    useEffect(() => {
-        const interval = setInterval(handleNext, 5000); // Changement automatique toutes les 5 secondes
-        return () => clearInterval(interval);
-    }, [discoverMovieList.length]);
+    // useEffect(() => {
+    //     const interval = setInterval(handleNext, 5000);
+    //     return () => clearInterval(interval);
+    // }, [discoverMovieList.length]);
 
     if (discoverMovieList.length === 0 || genresList.length === 0) {
         return <p>Chargement des données...</p>;
