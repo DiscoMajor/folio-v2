@@ -111,3 +111,10 @@
 .movie-poster-zoom:hover {
     transform: scale(1.05);
 }
+
+/* DISCOVER SECTION CARDS */
+
+.carousel-cards {
+    height: 500px;
+    width: 1000px;
+}

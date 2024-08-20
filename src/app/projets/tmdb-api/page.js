@@ -94,19 +94,31 @@ export default function Movie() {
 
             <section>
                 <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Discover Section</h1>
-                <div className="flex justify-center flex-wrap gap-5 p-5">
-                    {discoverMovieList.slice(0, 3).map((discoverMovie) => (
-                        <div key={discoverMovie.id} className="flex flex-col  bg-slate-400 p-5 rounded-md max-w-80 gap-3">
-                            <Image
-                                src={`https://image.tmdb.org/t/p/w500${discoverMovie.poster_path}`}
-                                width={200}
-                                height={300}
-                                alt={discoverMovie.title}
-                            />
-                            <h2>{discoverMovie.title}</h2>
-                            <p>Release Date: {discoverMovie.release_date}</p>
-                            <p>Rating: {discoverMovie.vote_average}</p>
-                            <p>{discoverMovie.original_language}</p>
+                <div className="relative flex justify-center flex-wrap gap-5 p-5">
+                    {discoverMovieList.slice(0, 4).map((discoverMovie) => (
+                        <div key={discoverMovie.id} className="relative carousel-cards overflow-hidden rounded-lg">
+                            <div className="relative w-full h-full">
+                                <Image
+                                    src={`https://image.tmdb.org/t/p/w1280${discoverMovie.backdrop_path}`}
+                                    alt={discoverMovie.title}
+                                    layout="fill"
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-5 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+                                <h2 className={`absolute top-10 xl:text-6xl xs:text-4xl text-center ${jersey.className}`}>
+                                    {discoverMovie.title}
+                                </h2>
+                                <p className="p-10 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-5">
+                                    {discoverMovie.overview}
+                                </p>
+                                <div
+                                    className={`absolute xl:bottom-10 xs:bottom-5 p-3 bg-zinc-800 rounded-md xl:leading-8 xs:leading-5 xs:text-sm xl:text-base bg-opacity-80`}
+                                >
+                                    <p>Release: {discoverMovie.release_date}</p>
+                                    <p>Rating: {discoverMovie.vote_average}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
