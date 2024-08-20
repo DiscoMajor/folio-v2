@@ -1,7 +1,7 @@
 "use client";
+import Carousel from "@/app/components/discoverMoviesCarousel";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
 import { Bebas_Neue } from "next/font/google";
 import { Bungee } from "next/font/google";
 
@@ -9,7 +9,6 @@ const jersey = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
 
 export default function Movie() {
-    const [discoverMovieList, setdiscoverMovieList] = useState([]);
     const [UpcomingMoviesList, setUpcomingMoviesList] = useState([]);
     const [genresList, setGenresList] = useState([]);
 
@@ -19,7 +18,6 @@ export default function Movie() {
             const request = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`);
             const res = await request.json();
             setGenresList(res.genres);
-            console.log(`GENRE :`, res);
         };
         getGenres();
     }, []);
@@ -39,20 +37,9 @@ export default function Movie() {
             const request = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`);
             const res = await request.json();
             setUpcomingMoviesList(res.results);
-            console.log(`Upcoming movies :`, res);
+            // console.log(`Upcoming movies :`, res);
         };
         getUpcoming();
-    }, []);
-
-    useEffect(() => {
-        const getData = async () => {
-            const apiKey = process.env.NEXT_PUBLIC_TMDB;
-            const query = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`);
-            const response = await query.json();
-            setdiscoverMovieList(response.results);
-            console.log(`Discover movies :`, response);
-        };
-        getData();
     }, []);
 
     return (
@@ -93,8 +80,8 @@ export default function Movie() {
             </section>
 
             <section>
-                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Discover Section</h1>
-                <div className="relative flex justify-center flex-wrap gap-5 p-5">
+                <h1 className={`xl:text-5xl xs:text-xl mt-16 font-bold text-center ${bungee.className}`}>Discover Section</h1>
+                {/*<div className="relative flex justify-center flex-wrap gap-5 p-5">
                     {discoverMovieList.slice(0, 4).map((discoverMovie) => (
                         <div key={discoverMovie.id} className="relative carousel-cards overflow-hidden rounded-lg">
                             <div className="relative w-full h-full">
@@ -120,7 +107,8 @@ export default function Movie() {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
+                <Carousel></Carousel>
             </section>
         </div>
     );
