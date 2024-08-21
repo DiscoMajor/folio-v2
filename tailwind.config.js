@@ -18,6 +18,9 @@ module.exports = {
             width: {
                 320: "320px",
             },
+            fontSize: {
+                xxs: "0.6rem",
+            },
         },
         screens: {
             xs: "360px",

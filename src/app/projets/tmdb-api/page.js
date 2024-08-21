@@ -82,7 +82,9 @@ export default function Movie() {
             </section>
 
             <section>
-                <h1 className={`xl:text-5xl xs:text-xl mt-16 font-bold text-center ${bungee.className}`}>Discover Section</h1>
+                <h1 className={`xl:text-5xl xs:text-xl p-5 xl:mt-10 xs:mt-1 font-bold text-center ${bungee.className}`}>
+                    Discover Section
+                </h1>
                 {/*<div className="relative flex justify-center flex-wrap gap-5 p-5">
                     {discoverMovieList.slice(0, 4).map((discoverMovie) => (
                         <div key={discoverMovie.id} className="relative carousel-cards overflow-hidden rounded-lg">

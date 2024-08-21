@@ -62,9 +62,9 @@ const Carousel = () => {
     }
 
     return (
-        <section className="p-10">
+        <section className="xl:p-10 xs:p-3">
             <div className="relative flex justify-center items-center ">
-                <button className=" p-5" onClick={handlePrev}>
+                <button className="xl:p-5 xs:p-1 absolute left-0 z-50" onClick={handlePrev}>
                     ⬅️
                 </button>
                 <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
@@ -74,27 +74,28 @@ const Carousel = () => {
                             alt={discoverMovieList[currentIndex].title}
                             height={500}
                             width={1000}
-                            style={{ width: "auto", height: "auto" }}
+                            style={{ width: "auto", height: "500" }}
                             className="object-cover "
                         />
 
                         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                            <h2 className={`absolute top-10 xl:text-6xl xs:text-4xl text-center ${jersey.className}`}>
+                            <h2 className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-5 sm:top-5 xs:top-2 ${jersey.className}`}>
                                 {discoverMovieList[currentIndex].title}
                             </h2>
-                            <p className="xl:p-10 xs:p-2 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-6 font-semibold ">
+                            <p className="xl:p-10 sm:p-10 xs:p-2 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ">
                                 {discoverMovieList[currentIndex].overview}
                             </p>
 
-                            <div className={`absolute xl:bottom-5 xs:bottom-5 p-3  xl:leading-8 xs:leading-5 xl:text-base xs:text-xs`}>
-                                <p>📅 {discoverMovieList[currentIndex].release_date}</p>
-                                <p>⭐ {discoverMovieList[currentIndex].vote_average}</p>
-                                <p>🎭 {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}</p>
+                            <div className={`absolute bottom-0 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
+                                <p>
+                                    📅 {discoverMovieList[currentIndex].release_date} - ⭐ {discoverMovieList[currentIndex].vote_average} -
+                                    🎭 {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button className="p-5" onClick={handleNext}>
+                <button className="xl:p-5 xs:p-1 absolute right-0 z-50" onClick={handleNext}>
                     ➡️
                 </button>
             </div>
