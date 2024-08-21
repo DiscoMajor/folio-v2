@@ -44,13 +44,22 @@ export default function Movie() {
     }, []);
 
     return (
-        <div className=" bg-slate-50 relative">
+        <div className="bg-slate-100 relative">
             <Analytics />
-            <section className="mx-10">
-                <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Upcoming Section</h1>
+            <section className="flex flex-col justify-center">
+                <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-5 mt-10 font-bold text-center ${bungee.className}`}>
+                    Discover Section
+                </h1>
+                <Carousel></Carousel>
+            </section>
+
+            <section className="mx-10 py-5">
+                <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center ${bungee.className}`}>
+                    Upcoming Section
+                </h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
                     {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
-                        <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-100 xs:scale-90">
+                        <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2  items-center xl:scale-100 xs:scale-90">
                             <div
                                 className="w-[320px] h-[475px] rounded-md text-white relative group overflow-hidden"
                                 style={{
@@ -67,7 +76,7 @@ export default function Movie() {
                                     <p className="text-sm font-semibold">{getGenreNames(UpcomingMovie.genre_ids).join(", ")}</p>
                                 </div>
 
-                                <div className=" bg-slate-50 bg-opacity-60 rounded p-2 absolute top-3 left-3 ">
+                                <div className="bg-slate-200 bg-opacity-60 rounded p-2 absolute top-3 left-3 ">
                                     <p className="text-sm font-semibold text-black">⭐ {UpcomingMovie.vote_average}</p>
                                 </div>
                             </div>
@@ -79,40 +88,6 @@ export default function Movie() {
                         </div>
                     ))}
                 </div>
-            </section>
-
-            <section>
-                <h1 className={`xl:text-5xl xs:text-xl p-5 xl:mt-10 xs:mt-1 font-bold text-center ${bungee.className}`}>
-                    Discover Section
-                </h1>
-                {/*<div className="relative flex justify-center flex-wrap gap-5 p-5">
-                    {discoverMovieList.slice(0, 4).map((discoverMovie) => (
-                        <div key={discoverMovie.id} className="relative carousel-cards overflow-hidden rounded-lg">
-                            <div className="relative w-full h-full">
-                                <Image
-                                    src={`https://image.tmdb.org/t/p/w1280${discoverMovie.backdrop_path}`}
-                                    alt={discoverMovie.title}
-                                    layout="fill"
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                                <h2 className={`absolute top-10 xl:text-6xl xs:text-4xl text-center ${jersey.className}`}>
-                                    {discoverMovie.title}
-                                </h2>
-                                <p className="xl:p-10 xs:p-2 text-justify xl:text-lg xs:text-md xl:leading-8 xs:leading-6 font-semibold ">
-                                    {discoverMovie.overview}
-                                </p>
-                                <div className={`absolute xl:bottom-5 xs:bottom-5 p-3  xl:leading-8 xs:leading-5 xl:text-base xs:text-xs`}>
-                                    <p>📅 {discoverMovie.release_date}</p>
-                                    <p>⭐ {discoverMovie.vote_average}</p>
-                                    <p>🎭 {getGenreNames(discoverMovie.genre_ids).join(", ")}</p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
-                <Carousel></Carousel>
             </section>
         </div>
     );

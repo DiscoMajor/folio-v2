@@ -64,10 +64,10 @@ const Carousel = () => {
     }
 
     return (
-        <section className="xl:p-10 xs:p-3">
+        <section className="xl:p-10 xs:p-3 drop-shadow-2xl">
             <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
                 <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
-                    <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8 xs:size-3"></Image>
+                    <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8  md:size-8 xs:size-4"></Image>
                 </button>
 
                 <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
@@ -100,7 +100,7 @@ const Carousel = () => {
                 </div>
 
                 <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50" onClick={handleNext}>
-                    <Image src={ArrowForward} alt="ArrowForward" height={18} width={18} className="xl:size-8 xs:size-3"></Image>
+                    <Image src={ArrowForward} alt="ArrowForward" height={18} width={18} className="xl:size-8 md:size-8 xs:size-4"></Image>
                 </button>
             </div>
         </section>
