@@ -14,8 +14,8 @@ const monda = Monda({ subsets: ["latin"], weight: ["400"] });
 export default function Home() {
     return (
         <main className=" text-white h-screen">
-            <Analytics />
             <section className="bg-gradientBg bg-cover relative">
+                <Analytics />
                 <SocialsIcons />
                 <MyName />
 

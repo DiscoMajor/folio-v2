@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Bebas_Neue } from "next/font/google";
 import { Bungee } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const jersey = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
@@ -44,6 +45,7 @@ export default function Movie() {
 
     return (
         <div className=" bg-slate-50 relative">
+            <Analytics />
             <section className="mx-10">
                 <h1 className={`xl:text-5xl xs:text-xl p-10 font-bold text-center ${bungee.className}`}>Upcoming Section</h1>
                 <div className="grid justify-items-center xs:gap-5 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">

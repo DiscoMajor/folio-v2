@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
     title: "Victor's PortFolio",
-    description: "PortFolio NextJS et TailwindCSS",
+    description: "PortFolio NextJS & TailwindCSS",
 };
 
 export default function RootLayout({ children }) {
