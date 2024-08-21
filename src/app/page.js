@@ -7,12 +7,14 @@ import SocialsIcons from "./components/socials.js";
 import Alternance from "./components/alternance.js";
 import DownArrow from "./components/arrowDown.js";
 import Projets from "./components/projets-const.js";
+import { Analytics } from "@vercel/analytics/react";
 
 const monda = Monda({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
     return (
         <main className=" text-white h-screen">
+            <Analytics />
             <section className="bg-gradientBg bg-cover relative">
                 <SocialsIcons />
                 <MyName />
