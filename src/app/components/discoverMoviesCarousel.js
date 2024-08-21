@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Bebas_Neue } from "next/font/google";
+import ArrowForward from "/public/icons/arrow_forward.svg";
+import ArrowBack from "/public/icons/arrow_back.svg";
 
 //! Responsive marche pas
 //! Ajouter une fade out au changement de films
@@ -63,10 +65,11 @@ const Carousel = () => {
 
     return (
         <section className="xl:p-10 xs:p-3">
-            <div className="relative flex justify-center items-center ">
-                <button className="xl:p-5 xs:p-1 absolute left-0 z-50" onClick={handlePrev}>
-                    ⬅️
+            <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
+                <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
+                    <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8 xs:size-3"></Image>
                 </button>
+
                 <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
                     <div className="relative carousel-cards">
                         <Image
@@ -95,8 +98,9 @@ const Carousel = () => {
                         </div>
                     </div>
                 </div>
-                <button className="xl:p-5 xs:p-1 absolute right-0 z-50" onClick={handleNext}>
-                    ➡️
+
+                <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50" onClick={handleNext}>
+                    <Image src={ArrowForward} alt="ArrowForward" height={18} width={18} className="xl:size-8 xs:size-3"></Image>
                 </button>
             </div>
         </section>
