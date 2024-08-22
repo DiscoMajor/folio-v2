@@ -3,6 +3,9 @@ module.exports = {
     content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
     theme: {
         extend: {
+            colors: {
+                navycolor: "#0C2340",
+            },
             size: {
                 60: "60px",
                 52: "52px",
@@ -39,9 +42,6 @@ module.exports = {
             gradientBg: "url('/background/gradient1.jpg')",
             gradientBg2: "url('/background/gradient2.jpg')",
         },
-        // backgroundColor: {
-        //     offwhite: "#F8FBF8",
-        // },
     },
     plugins: [],
 };

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Bebas_Neue } from "next/font/google";
+import { Bungee } from "next/font/google";
 import ArrowForward from "/public/icons/arrow_forward.svg";
 import ArrowBack from "/public/icons/arrow_back.svg";
 
-//! Responsive marche pas
-//! Ajouter une fade out au changement de films
-//! Afficher 3-4 films maximum
-//! revoir les boutons des sliders
-
 const jersey = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,44 +61,59 @@ const Carousel = () => {
     }
 
     return (
-        <section className="xl:p-10 xs:p-3 drop-shadow-2xl">
-            <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
-                <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
-                    <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8  md:size-8 xs:size-4"></Image>
-                </button>
+        <section className="flex flex-col justify-center">
+            <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-5 mt-10 font-bold text-center text-white ${bungee.className}`}>
+                Discover Section
+            </h1>
 
-                <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
-                    <div className="relative carousel-cards">
-                        <Image
-                            src={`https://image.tmdb.org/t/p/w1280${discoverMovieList[currentIndex].backdrop_path}`}
-                            alt={discoverMovieList[currentIndex].title}
-                            height={500}
-                            width={1000}
-                            style={{ width: "auto", height: "500" }}
-                            className="object-cover "
-                        />
+            <div className="xl:p-10 xs:p-3 drop-shadow-2xl">
+                <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
+                    <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
+                        <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8  md:size-8 xs:size-4"></Image>
+                    </button>
 
-                        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                            <h2 className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-5 sm:top-5 xs:top-2 ${jersey.className}`}>
-                                {discoverMovieList[currentIndex].title}
-                            </h2>
-                            <p className="xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ">
-                                {discoverMovieList[currentIndex].overview}
-                            </p>
+                    <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
+                        <div className="relative carousel-cards">
+                            <Image
+                                src={`https://image.tmdb.org/t/p/w1280${discoverMovieList[currentIndex].backdrop_path}`}
+                                alt={discoverMovieList[currentIndex].title}
+                                height={500}
+                                width={1000}
+                                style={{ width: "auto", height: "500" }}
+                                className="object-cover "
+                            />
 
-                            <div className={`absolute bottom-0 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
-                                <p>
-                                    📅 {discoverMovieList[currentIndex].release_date} - ⭐ {discoverMovieList[currentIndex].vote_average} -
-                                    🎭 {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
+                            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+                                <h2
+                                    className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-5 sm:top-5 xs:top-2 ${jersey.className}`}
+                                >
+                                    {discoverMovieList[currentIndex].title}
+                                </h2>
+                                <p className="xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ">
+                                    {discoverMovieList[currentIndex].overview}
                                 </p>
+
+                                <div className={`absolute bottom-0 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
+                                    <p>
+                                        📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
+                                        {discoverMovieList[currentIndex].vote_average} - 🎭{" "}
+                                        {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50" onClick={handleNext}>
-                    <Image src={ArrowForward} alt="ArrowForward" height={18} width={18} className="xl:size-8 md:size-8 xs:size-4"></Image>
-                </button>
+                    <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50" onClick={handleNext}>
+                        <Image
+                            src={ArrowForward}
+                            alt="ArrowForward"
+                            height={18}
+                            width={18}
+                            className="xl:size-8 md:size-8 xs:size-4"
+                        ></Image>
+                    </button>
+                </div>
             </div>
         </section>
     );

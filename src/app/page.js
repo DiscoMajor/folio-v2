@@ -1,7 +1,7 @@
 "use client";
 import "animate.css";
 import { Monda } from "next/font/google";
-import MyName from "./components/heading.js";
+import Intro from "./components/intro.js";
 import ToolStack from "./components/toolstack.js";
 import SocialsIcons from "./components/socials.js";
 import Alternance from "./components/alternance.js";
@@ -17,7 +17,7 @@ export default function Home() {
             <section className="bg-gradientBg bg-cover relative">
                 <Analytics />
                 <SocialsIcons />
-                <MyName />
+                <Intro />
 
                 <div className={monda.className}>
                     <Alternance />
