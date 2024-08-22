@@ -9,7 +9,7 @@ export default function Movie() {
         <div className="bg-navycolor relative">
             <Analytics />
 
-            {/* <Header></Header> */}
+            <Header></Header>
 
             <DiscoverMoviesCarousel />
 

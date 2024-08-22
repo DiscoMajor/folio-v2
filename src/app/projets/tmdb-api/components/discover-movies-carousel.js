@@ -63,10 +63,10 @@ const Carousel = () => {
     return (
         <section className="flex flex-col justify-center">
             <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-5 mt-10 font-bold text-center text-white ${bungee.className}`}>
-                Discover Section
+                Find a must-watch movie.
             </h1>
 
-            <div className="xl:p-10 xs:p-3 drop-shadow-2xl">
+            <div className="xl:p-10 xs:p-3 drop-shadow-3xl">
                 <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
                     <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
                         <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8  md:size-8 xs:size-4"></Image>
@@ -79,6 +79,7 @@ const Carousel = () => {
                                 alt={discoverMovieList[currentIndex].title}
                                 height={500}
                                 width={1000}
+                                priority
                                 style={{ width: "auto", height: "500" }}
                                 className="object-cover "
                             />

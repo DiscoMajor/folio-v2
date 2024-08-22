@@ -103,19 +103,51 @@
 .searchHeader input[type="text"] {
     width: 25px;
     background-color: #252435;
-    /* background-color: #252435; */
     background-image: url("/tmdb/icons/search.svg");
-    background-size: 25px;
+    background-size: 26px;
     background-repeat: no-repeat;
+    background-position: 5px center;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    padding-left: 25px;
-    font-size: 16px;
+    padding-left: 35px; /* Ajouter plus de padding pour l'icône */
+    padding-top: 3px;
 }
 
 .searchHeader input[type="text"]:focus {
     width: 100%;
+    outline: none;
+    border: 1px solid rgb(172, 167, 241);
+    border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    .searchHeader input[type="text"] {
+        background-size: 20px;
+        background-position: 5px center;
+        padding-left: 20px;
+    }
+    .searchHeader input[type="text"]:focus {
+        width: 100px;
+    }
+}
+
+/* Burger menu  */
+
+/* .button-burger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .list-menu {
+        display: none;
+    }
+    .button-burger {
+        display: block;
+    }
+} */
 
 /* UPCOMING SECTION CARDS */
 
