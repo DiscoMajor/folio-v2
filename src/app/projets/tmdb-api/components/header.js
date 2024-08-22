@@ -6,16 +6,19 @@ import BurgerMenu from "./burger-menu.js";
 import { Bebas_Neue } from "next/font/google";
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
+//! DECOMMENTER LE CSS DES MENUS BURGERS
+//! DECOMMENTER LA SEARCH BAR ET LE BURGERMENU SUR CETTE PAGE
+
 export default function Header() {
     return (
         <>
-            <header className="relative xl:p-8 sm:p-5 xs:p-3">
+            <header className="relative xl:p-3 sm:p-3 xs:p-3 xl:mx-8 sm:mx-5 xs:mx-0 text-center">
                 <nav className={`flex justify-between items-center ${bebas.className} text-white xl:text-xl md:text-lg xs:text-sm`}>
                     {/* <BurgerMenu></BurgerMenu> */}
-                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 nav-menu">
-                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-20" />
+                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-3 nav-menu">
+                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14" />
 
-                        <ul className="flex xl:gap-16 md:gap-10 xs:gap-5">
+                        <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
                             <li className="hover:scale-110 transition ease-in-out duration-300">Home</li>
                             <li className="hover:scale-110 transition ease-in-out duration-300">Discover Section</li>
                             <li className="hover:scale-110 transition ease-in-out duration-300">Upcoming Films</li>
