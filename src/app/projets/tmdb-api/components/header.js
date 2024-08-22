@@ -15,7 +15,7 @@ export default function Header() {
             <header className="relative xl:p-3 sm:p-3 xs:p-3 xl:mx-8 sm:mx-5 xs:mx-0 text-center">
                 <nav className={`flex justify-between items-center ${bebas.className} text-white xl:text-xl md:text-lg xs:text-sm`}>
                     {/* <BurgerMenu></BurgerMenu> */}
-                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-3 nav-menu">
+                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 nav-menu">
                         <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14" />
 
                         <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
