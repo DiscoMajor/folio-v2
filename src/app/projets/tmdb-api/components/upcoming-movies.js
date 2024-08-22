@@ -9,6 +9,17 @@ export default function UpcomingMovies() {
     const [genresList, setGenresList] = useState([]);
 
     useEffect(() => {
+        const getUpcoming = async () => {
+            const apiKey = process.env.NEXT_PUBLIC_TMDB;
+            const request = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`);
+            const res = await request.json();
+            setUpcomingMoviesList(res.results);
+            // console.log(`Upcoming movies :`, res);
+        };
+        getUpcoming();
+    }, []);
+
+    useEffect(() => {
         const getGenres = async () => {
             const apiKey = process.env.NEXT_PUBLIC_TMDB;
             const request = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`);
@@ -27,25 +38,14 @@ export default function UpcomingMovies() {
             .filter(Boolean);
     };
 
-    useEffect(() => {
-        const getUpcoming = async () => {
-            const apiKey = process.env.NEXT_PUBLIC_TMDB;
-            const request = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`);
-            const res = await request.json();
-            setUpcomingMoviesList(res.results);
-            // console.log(`Upcoming movies :`, res);
-        };
-        getUpcoming();
-    }, []);
-
     return (
         <section className="mx-10 py-5 relative z-1">
             <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center text-white ${bungee.className}`}>
-                Upcoming Section
+                Upcoming Films
             </h1>
-            <div className="grid justify-items-center xs:gap-0 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-center drop-shadow-xl">
+            <div className="grid justify-items-center xs:gap-0 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-xl">
                 {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
-                    <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 xs:scale-75">
+                    <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-75">
                         <div
                             className="w-[320px] h-[475px] rounded-2xl text-white relative group overflow-hidden"
                             style={{
@@ -66,11 +66,11 @@ export default function UpcomingMovies() {
                         </div>
 
                         <div className="bg-zinc-900 bg-opacity-80 rounded-2xl p-5 absolute -top-6 -right-9 z-50">
-                            <p className="text-sm font-semibold text-white">⭐ {UpcomingMovie.vote_average}</p>
+                            <p className="text-sm font-semibold text-white">⭐ {UpcomingMovie.vote_average.toFixed(1)}</p>
                         </div>
 
                         <div className="flex flex-col items-center max-w-72">
-                            <h2 className={`text-xl p-2 text-white text-center ${bebas.className}`}>{UpcomingMovie.title}</h2>
+                            <h2 className={`text-2xl p-2 text-white text-center ${bebas.className}`}>{UpcomingMovie.title}</h2>
                         </div>
                     </div>
                 ))}

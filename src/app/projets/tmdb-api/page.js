@@ -1,12 +1,15 @@
 "use client";
-import DiscoverMoviesCarousel from "@/app/components/discoverMoviesCarousel";
+import DiscoverMoviesCarousel from "@/app/projets/tmdb-api/components/discover-movies-carousel.js";
 import { Analytics } from "@vercel/analytics/react";
-import UpcomingMovies from "@/app/components/upcoming-movies.js";
+import UpcomingMovies from "./components/upcoming-movies.js";
+import Header from "@/app/projets/tmdb-api/components/header.js";
 
 export default function Movie() {
     return (
         <div className="bg-navycolor relative">
             <Analytics />
+
+            {/* <Header></Header> */}
 
             <DiscoverMoviesCarousel />
 
@@ -14,6 +17,3 @@ export default function Movie() {
         </div>
     );
 }
-
-/* {discoverMovieList.slice(0, 10) affiche 10 films maximum. */
-/* {discoverMovieList.map((movie) parcours tous les films à découvrir */

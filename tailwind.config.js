@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                navycolor: "#0C2340",
+                navycolor: "#252435",
             },
             size: {
                 60: "60px",

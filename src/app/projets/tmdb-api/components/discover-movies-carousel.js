@@ -96,7 +96,7 @@ const Carousel = () => {
                                 <div className={`absolute bottom-0 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
                                     <p>
                                         📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
-                                        {discoverMovieList[currentIndex].vote_average} - 🎭{" "}
+                                        {discoverMovieList[currentIndex].vote_average.toFixed(1)} - 🎭{" "}
                                         {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
                                     </p>
                                 </div>
