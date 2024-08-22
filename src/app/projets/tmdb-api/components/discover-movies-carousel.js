@@ -5,7 +5,7 @@ import { Bungee } from "next/font/google";
 import ArrowForward from "/public/icons/arrow_forward.svg";
 import ArrowBack from "/public/icons/arrow_back.svg";
 
-const jersey = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
 
 const Carousel = () => {
@@ -85,7 +85,7 @@ const Carousel = () => {
 
                             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
                                 <h2
-                                    className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-5 sm:top-5 xs:top-2 ${jersey.className}`}
+                                    className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-5 sm:top-5 xs:top-2 ${bebas.className}`}
                                 >
                                     {discoverMovieList[currentIndex].title}
                                 </h2>

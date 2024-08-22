@@ -47,7 +47,7 @@
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-/* Card INDEX*/
+/* Cards INDEX FIRST FOLIO PAGE*/
 
 .card {
     max-width: 385px;
@@ -98,6 +98,25 @@
 
 /* THE MOVIE DATABASE */
 
+/*Header searchbar TMDB */
+
+.searchHeader input[type="text"] {
+    width: 25px;
+    background-color: #252435;
+    /* background-color: #252435; */
+    background-image: url("/tmdb/icons/search.svg");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+.searchHeader input[type="text"]:focus {
+    width: 100%;
+}
+
 /* UPCOMING SECTION CARDS */
 
 .movie-poster-zoom {
@@ -111,7 +130,3 @@
 .movie-poster-zoom:hover {
     transform: scale(1.05);
 }
-
-/* DISCOVER SECTION CARDS */
-
-/* Discover section carousel transition */
