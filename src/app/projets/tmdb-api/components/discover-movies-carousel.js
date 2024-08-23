@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Bebas_Neue } from "next/font/google";
-import { Bungee } from "next/font/google";
+import { Abel } from "next/font/google";
 import ArrowForward from "/public/icons/arrow_forward.svg";
 import ArrowBack from "/public/icons/arrow_back.svg";
 
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
-const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
+const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +62,7 @@ const Carousel = () => {
 
     return (
         <section className="flex flex-col justify-center">
-            <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-5 mt-10 font-bold text-center text-white ${bungee.className}`}>
+            <h1 className={`xl:text-6xl md:text-5xl xs:text-xl p-2 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
                 Find a must-watch movie.
             </h1>
 
@@ -90,7 +90,9 @@ const Carousel = () => {
                                 >
                                     {discoverMovieList[currentIndex].title}
                                 </h2>
-                                <p className="xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ">
+                                <p
+                                    className={`xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ${abel.className} `}
+                                >
                                     {discoverMovieList[currentIndex].overview}
                                 </p>
 

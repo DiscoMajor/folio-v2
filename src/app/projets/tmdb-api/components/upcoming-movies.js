@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Bungee } from "next/font/google";
+import { Abel } from "next/font/google";
 import { Bebas_Neue } from "next/font/google";
-const bungee = Bungee({ subsets: ["latin"], weight: ["400"] });
+const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
 export default function UpcomingMovies() {
@@ -40,9 +40,9 @@ export default function UpcomingMovies() {
 
     return (
         <section className="mx-10 py-5 relative z-1">
-            <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center text-white ${bungee.className}`}>
+            {/* <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center text-white ${abel.className}`}>
                 Upcoming Films
-            </h1>
+            </h1> */}
             <div className="grid justify-items-center xs:gap-0 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-xl">
                 {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                     <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-75">
