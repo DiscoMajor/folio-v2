@@ -14,15 +14,16 @@ export default function Header() {
         <>
             <header className="relative xl:p-3 sm:p-3 xs:p-3 xl:mx-8 sm:mx-5 xs:mx-0 text-center">
                 <nav className={`flex justify-between items-center ${bebas.className} text-white xl:text-xl md:text-lg xs:text-sm`}>
-                    {/* <BurgerMenu></BurgerMenu> */}
-                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 nav-menu">
+                    <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
                         <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14" />
-
-                        <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
-                            <li className="hover:scale-110 transition ease-in-out duration-300">Home</li>
-                            <li className="hover:scale-110 transition ease-in-out duration-300">Discover Section</li>
-                            <li className="hover:scale-110 transition ease-in-out duration-300">Upcoming Films</li>
-                        </ul>
+                        {/* <BurgerMenu></BurgerMenu> */}
+                        <section className="nav-menu">
+                            <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
+                                <li className="hover:scale-110 transition ease-in-out duration-300">Home</li>
+                                <li className="hover:scale-110 transition ease-in-out duration-300">Discover Section</li>
+                                <li className="hover:scale-110 transition ease-in-out duration-300">Upcoming Films</li>
+                            </ul>
+                        </section>
                     </div>
 
                     <div>
@@ -30,19 +31,19 @@ export default function Header() {
                             {/* <li className="flex flex-row-reverse searchHeader  text-base">
                                 <input type="text" name="search" alt="Search logo" />
                             </li> */}
-                            <li className="shrink-0">
+                            <li className=" shrink-0">
                                 <Image
-                                    src={NotificationLogo}
-                                    alt="Notifications logo"
+                                    src={AccountLogo}
+                                    alt="Account Logo"
                                     height={24}
                                     width={24}
                                     className="xl:size-7 md:size-6 xs:size-5"
                                 />
                             </li>
-                            <li className=" shrink-0">
+                            <li className="shrink-0 burger-menu-logos">
                                 <Image
-                                    src={AccountLogo}
-                                    alt="Account Logo"
+                                    src={NotificationLogo}
+                                    alt="Notifications logo"
                                     height={24}
                                     width={24}
                                     className="xl:size-7 md:size-6 xs:size-5"
