@@ -9,7 +9,7 @@ module.exports = {
             },
             colors: {
                 navycolor: "#252435",
-                sweetrose: "#aca7f1",
+                sweetpurple: "#aca7f1",
             },
             size: {
                 60: "60px",
