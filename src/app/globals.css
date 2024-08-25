@@ -98,6 +98,15 @@
 
 /* THE MOVIE DATABASE */
 
+/* Header */
+
+/* Header fade */
+
+.header-fade {
+    background: rgb(37, 36, 53);
+    background: linear-gradient(0deg, rgba(37, 36, 53, 1) 38%, rgba(51, 50, 73, 1) 100%);
+}
+
 /*Header searchbar TMDB */
 
 .searchHeader input[type="text"] {
@@ -116,7 +125,7 @@
 .searchHeader input[type="text"]:focus {
     width: 100%;
     outline: none;
-    border: 1px solid rgb(172, 167, 241);
+    border: 1px solid #aca7f1;
     border-radius: 5px;
 }
 
@@ -171,4 +180,17 @@
 
 .movie-poster-zoom:hover {
     transform: scale(1.05);
+}
+
+/* FOOTER */
+
+.footer-fade {
+    background: rgb(37, 36, 53);
+    background: linear-gradient(180deg, rgba(37, 36, 53, 1) 38%, rgba(51, 50, 73, 1) 100%);
+}
+
+.footer-li {
+    li:hover {
+        text-decoration: underline;
+    }
 }

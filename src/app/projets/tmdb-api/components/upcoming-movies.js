@@ -43,7 +43,7 @@ export default function UpcomingMovies() {
             {/* <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center text-white ${abel.className}`}>
                 Upcoming Films
             </h1> */}
-            <div className="grid justify-items-center xs:gap-0 sm:gap-8 md:gap-10 xxl:gap-14 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-xl">
+            <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-xl">
                 {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
                     <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-75">
                         <div

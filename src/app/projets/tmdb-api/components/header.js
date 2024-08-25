@@ -12,7 +12,7 @@ const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
 export default function Header() {
     return (
-        <>
+        <section className="header-fade">
             <header className="relative p-1 xl:mx-8 sm:mx-5 xs:mx-2 text-center">
                 <nav className={`flex justify-between items-center ${abel.className} text-white xl:text-xl md:text-lg xs:text-xs`}>
                     <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
@@ -32,15 +32,7 @@ export default function Header() {
                             {/* <li className="flex flex-row-reverse searchHeader  text-base">
                                 <input type="text" name="search" alt="Search logo" />
                             </li> */}
-                            <li className=" shrink-0">
-                                <Image
-                                    src={AccountLogo}
-                                    alt="Account Logo"
-                                    height={24}
-                                    width={24}
-                                    className="xl:size-7 md:size-6 xs:size-5"
-                                />
-                            </li>
+
                             <li className="shrink-0 burger-menu-logos">
                                 <Image
                                     src={NotificationLogo}
@@ -50,10 +42,19 @@ export default function Header() {
                                     className="xl:size-7 md:size-6 xs:size-5"
                                 />
                             </li>
+                            <li className=" shrink-0">
+                                <Image
+                                    src={AccountLogo}
+                                    alt="Account Logo"
+                                    height={24}
+                                    width={24}
+                                    className="xl:size-7 md:size-6 xs:size-5"
+                                />
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </header>
-        </>
+        </section>
     );
 }

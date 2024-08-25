@@ -12,8 +12,9 @@ import ReactIcon from "/public/icons/react.svg";
 import TailwindIcon from "/public/icons/tailwind.svg";
 import TrelloIcon from "/public/icons/trello.svg";
 import ApiIcon from "/public/icons/apifetch.svg";
+import CssIcon from "/public/icons/css.svg";
 
-const icons = [JsIcon, GitIcon, ReactIcon, NextIcon, TrelloIcon, MysqlIcon, TailwindIcon, PhpIcon, FigmaIcon, ApiIcon];
+const icons = [JsIcon, GitIcon, ReactIcon, NextIcon, CssIcon, TrelloIcon, MysqlIcon, TailwindIcon, PhpIcon, FigmaIcon, ApiIcon];
 
 const ToolStackSlider = () => {
     const sliderRef = useRef(null);

@@ -62,14 +62,20 @@ const Carousel = () => {
 
     return (
         <section className="flex flex-col justify-center">
-            <h1 className={`xl:text-6xl md:text-5xl xs:text-xl p-2 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
+            <h1 className={`xl:text-7xl md:text-5xl xs:text-xl p-8 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
                 Find a must-watch movie.
             </h1>
 
-            <div className="xl:p-10 xs:p-3 drop-shadow-3xl">
+            <div className="xl:p-5 xs:p-3 drop-shadow-3xl">
                 <div className="relative flex justify-center items-center max-w-[1000px] mx-auto">
-                    <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50" onClick={handlePrev}>
-                        <Image src={ArrowBack} alt="ArrowBack" height={18} width={18} className="xl:size-8  md:size-8 xs:size-4"></Image>
+                    <button className="p-3 absolute xl:-left-4 sm:-left-4 xs:-left-3 z-50 " onClick={handlePrev}>
+                        <Image
+                            src={ArrowBack}
+                            alt="ArrowBack"
+                            height={18}
+                            width={18}
+                            className="xl:size-8  md:size-8 xs:size-4 contrast-200 drop-shadow-4xl"
+                        ></Image>
                     </button>
 
                     <div key={discoverMovieList.id} className="relative overflow-hidden rounded-lg">
@@ -107,13 +113,13 @@ const Carousel = () => {
                         </div>
                     </div>
 
-                    <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50" onClick={handleNext}>
+                    <button className="p-3 absolute xl:-right-4 sm:-right-4 xs:-right-3 z-50 " onClick={handleNext}>
                         <Image
                             src={ArrowForward}
                             alt="ArrowForward"
                             height={18}
                             width={18}
-                            className="xl:size-8 md:size-8 xs:size-4"
+                            className="xl:size-8 md:size-8 xs:size-4 contrast-200 drop-shadow-4xl"
                         ></Image>
                     </button>
                 </div>

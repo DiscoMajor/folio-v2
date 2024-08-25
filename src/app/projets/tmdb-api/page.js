@@ -3,10 +3,11 @@ import DiscoverMoviesCarousel from "@/app/projets/tmdb-api/components/discover-m
 import { Analytics } from "@vercel/analytics/react";
 import UpcomingMovies from "./components/upcoming-movies.js";
 import Header from "@/app/projets/tmdb-api/components/header.js";
+import Footer from "./components/footer.js";
 
 export default function Movie() {
     return (
-        <div className="bg-navycolor relative">
+        <div className="bg-navycolor ">
             <Analytics />
 
             <Header></Header>
@@ -14,6 +15,8 @@ export default function Movie() {
             <DiscoverMoviesCarousel />
 
             <UpcomingMovies />
+
+            <Footer></Footer>
         </div>
     );
 }
