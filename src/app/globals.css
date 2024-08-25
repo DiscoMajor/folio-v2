@@ -194,25 +194,3 @@
         text-decoration: underline;
     }
 }
-
-@media (max-width: 768px) {
-    .footer-li {
-        li {
-            font-size: small;
-        }
-        h1 {
-            font-size: medium;
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .footer-li {
-        li {
-            font-size: smaller;
-        }
-        h1 {
-            font-size: 12px;
-        }
-    }
-}
