@@ -40,14 +40,11 @@ export default function UpcomingMovies() {
 
     return (
         <section className="mx-10 py-5 relative z-1">
-            {/* <h1 className={`xl:text-5xl md:text-5xl xs:text-xl p-3 xl:mb-12 font-bold text-center text-white ${abel.className}`}>
-                Upcoming Films
-            </h1> */}
-            <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-xl">
+            <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center drop-shadow-2xl">
                 {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
-                    <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-75">
+                    <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-90">
                         <div
-                            className="w-[320px] h-[475px] rounded-2xl text-white relative group overflow-hidden"
+                            className="xl:w-[320px] xl:h-[475px] sm:w-[320px] sm:h-[475px]  xs:w-[320px] xs:h-[400px] rounded-2xl text-white relative group overflow-hidden"
                             style={{
                                 backgroundImage: `url(https://image.tmdb.org/t/p/w500${UpcomingMovie.poster_path})`,
                             }}
@@ -65,7 +62,7 @@ export default function UpcomingMovies() {
                             </div>
                         </div>
 
-                        <div className="bg-zinc-900 bg-opacity-80 rounded-2xl p-5 absolute -top-6 -right-9 z-50">
+                        <div className=" bg-slate-400 bg-opacity-30 rounded-2xl p-4 absolute -top-6 -right-9 z-50">
                             <p className="text-sm font-semibold text-white">⭐ {UpcomingMovie.vote_average.toFixed(1)}</p>
                         </div>
 
