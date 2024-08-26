@@ -19,11 +19,11 @@ export default function BurgerMenu() {
             </div>
 
             <ul
-                className={`bg-slate-500 bg-opacity-90 rounded-md absolute z-50 left-0  top-14 transition-opacity ease-in-out duration-500 ${
+                className={`bg-slate-500 bg-opacity-90 rounded-md absolute z-50 left-5 top-14 transition-opacity ease-in-out duration-500 ${
                     isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
             >
-                <button onClick={toggleMenu} className="absolute top-5 right-5 z-50">
+                <button onClick={toggleMenu} className="absolute top-3 right-3 z-50 drop-shadow-4xl">
                     <Image src={BurgerMenuClose} width={20} height={20} alt="close burger menu" className="size-3" />
                 </button>
                 <section className="flex flex-col items-center justify-between p-5 gap-4 h-70 text-lg drop-shadow-4xl">
