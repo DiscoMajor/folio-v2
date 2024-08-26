@@ -95,7 +95,7 @@ const Carousel = () => {
                                     {discoverMovieList[currentIndex].title}
                                 </h2>
                                 <p
-                                    className={`xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-xxs xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
+                                    className={`xl:p-10 sm:p-10 xs:p-4 text-justify xl:text-lg sm:text-base xs:text-custom xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
                                 >
                                     {discoverMovieList[currentIndex].overview}
                                 </p>
