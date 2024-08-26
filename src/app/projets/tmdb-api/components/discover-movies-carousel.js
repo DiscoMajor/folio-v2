@@ -59,7 +59,7 @@ const Carousel = () => {
     }
 
     return (
-        <section className="flex flex-col justify-center">
+        <section className="flex flex-col justify-center p-1">
             <h1 className={`xl:text-7xl md:text-5xl xs:text-4xl p-8 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
                 Find a must-watch movie.
             </h1>
