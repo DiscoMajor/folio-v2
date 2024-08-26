@@ -12,7 +12,7 @@ export default function Header() {
             <header className="relative p-1 xl:mx-8 sm:mx-5 xs:mx-2 text-center">
                 <nav className={`flex justify-between items-center ${abel.className} text-white xl:text-xl md:text-lg xs:text-xs`}>
                     <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
-                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14" />
+                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14 " />
                         <BurgerMenu></BurgerMenu>
                         <section className="nav-menu">
                             <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
@@ -39,7 +39,7 @@ export default function Header() {
                                     alt="Notifications logo"
                                     height={24}
                                     width={24}
-                                    className="xl:size-7 md:size-6 xs:size-5"
+                                    className="xl:size-7 md:size-6 xs:size-5 "
                                 />
                             </li>
                             <li className=" shrink-0">

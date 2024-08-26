@@ -14,7 +14,7 @@ export default function BurgerMenu() {
         <section className="button-burger ">
             <div className="flex justify-center items-center gap-5">
                 <button onClick={toggleMenu}>
-                    <Image src={BurgerIcon} width={20} height={20} alt="open burger menu" className="size-5" />
+                    <Image src={BurgerIcon} width={20} height={20} alt="open burger menu" className="size-5 " />
                 </button>
             </div>
 

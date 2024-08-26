@@ -13,7 +13,7 @@ export default function Footer() {
 
             <div>
                 <ul className="flex flex-col xl:gap-2 xs:gap-0.5">
-                    <h1 className="xl:text-xl md:text-large xs:text-xs font-bold hover:text-sweetpurple">The MovieDatabase</h1>
+                    <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold hover:text-sweetpurple">The MovieDatabase</h1>
                     <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2">
                         <li>
                             <Link href="https://www.themoviedb.org/about" target="blank">
@@ -36,7 +36,7 @@ export default function Footer() {
 
             <div>
                 <ul>
-                    <h1 className="xl:text-xl md:text-large xs:text-xs font-bold hover:text-sweetpurple">Contact Us</h1>
+                    <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold hover:text-sweetpurple">Contact Us</h1>
                     <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2">
                         <li>
                             <Link href="#">Mail</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
 
             <div>
                 <ul className="flex flex-col xl:gap-2 xs:gap-0.5">
-                    <h1 className="xl:text-xl md:text-large xs:text-xs font-bold hover:text-sweetpurple">Legal</h1>
+                    <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold hover:text-sweetpurple">Legal</h1>
                     <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2">
                         <li>
                             <Link href="#">Privacy</Link>
