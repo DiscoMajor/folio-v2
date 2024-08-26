@@ -29,9 +29,9 @@ export default function Header() {
 
                     <div>
                         <ul className="flex items-center xl:gap-12 md:gap-10 xs:gap-3">
-                            <li className="flex flex-row-reverse searchHeader  text-base">
+                            {/* <li className="flex flex-row-reverse searchHeader  text-base">
                                 <input type="text" name="search" alt="Search logo" />
-                            </li>
+                            </li> */}
 
                             <li className="shrink-0 burger-menu-logos">
                                 <Image
