@@ -26,7 +26,7 @@ export default function BurgerMenu() {
                 <button onClick={toggleMenu} className="absolute top-5 right-5 z-50">
                     <Image src={BurgerMenuClose} width={20} height={20} alt="close burger menu" className="size-3" />
                 </button>
-                <section className="flex flex-col items-center justify-between p-10 gap-5 h-70 text-lg drop-shadow-4xl">
+                <section className="flex flex-col items-center justify-between p-5 gap-4 h-70 text-lg drop-shadow-4xl">
                     <li>Home</li>
                     <li>Discover Section</li>
                     <li>Upcoming Films</li>
