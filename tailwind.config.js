@@ -47,6 +47,7 @@ module.exports = {
         backgroundImage: {
             gradientBg: "url('/background/gradient1.jpg')",
             gradientBg2: "url('/background/gradient2.jpg')",
+            "burger-fade": "linear-gradient(180deg, rgba(44, 43, 63, 0.9) 38%, rgba(58, 57, 83, 0.9) 100%)",
         },
     },
     plugins: [],

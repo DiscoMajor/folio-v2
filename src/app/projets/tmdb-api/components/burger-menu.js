@@ -19,7 +19,7 @@ export default function BurgerMenu() {
             </div>
 
             <ul
-                className={`bg-sky-950 bg-opacity-90 rounded-md absolute z-50 left-5 top-14 transition-opacity ease-in-out duration-500 ${
+                className={`bg-burger-fade rounded-md absolute z-50 left-5 top-14 transition-opacity ease-in-out duration-500 ${
                     isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
             >
