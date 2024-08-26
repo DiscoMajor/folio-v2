@@ -6,10 +6,6 @@ import BurgerMenu from "./burger-menu.js";
 import { Abel } from "next/font/google";
 const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
-//! DECOMMENTER LE CSS DES MENUS BURGERS
-//! DECOMMENTER LA SEARCH BAR
-//! DECOMMENTER LE BURGERMENU SUR CETTE PAGE
-
 export default function Header() {
     return (
         <section className="header-fade">
@@ -17,21 +13,25 @@ export default function Header() {
                 <nav className={`flex justify-between items-center ${abel.className} text-white xl:text-xl md:text-lg xs:text-xs`}>
                     <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
                         <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14" />
-                        {/* <BurgerMenu></BurgerMenu> */}
+                        <BurgerMenu></BurgerMenu>
                         <section className="nav-menu">
                             <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
-                                <li className="hover:scale-105 transition ease-in-out duration-300">Home</li>
-                                <li className="hover:scale-105 transition ease-in-out duration-300">Discover Section</li>
-                                <li className="hover:scale-105 transition ease-in-out duration-300">Upcoming Films</li>
+                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">Home</li>
+                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
+                                    Discover Section
+                                </li>
+                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
+                                    Upcoming Films
+                                </li>
                             </ul>
                         </section>
                     </div>
 
                     <div>
                         <ul className="flex items-center xl:gap-12 md:gap-10 xs:gap-3">
-                            {/* <li className="flex flex-row-reverse searchHeader  text-base">
+                            <li className="flex flex-row-reverse searchHeader  text-base">
                                 <input type="text" name="search" alt="Search logo" />
-                            </li> */}
+                            </li>
 
                             <li className="shrink-0 burger-menu-logos">
                                 <Image
