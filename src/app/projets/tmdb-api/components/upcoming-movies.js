@@ -7,6 +7,7 @@ const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 export default function UpcomingMovies() {
     const [UpcomingMoviesList, setUpcomingMoviesList] = useState([]);
     const [genresList, setGenresList] = useState([]);
+    const [loadMore, setLoadMore] = useState(4);
 
     useEffect(() => {
         const getUpcoming = async () => {
@@ -38,10 +39,14 @@ export default function UpcomingMovies() {
             .filter(Boolean);
     };
 
+    const ShowMoreFilms = () => {
+        setLoadMore((prevValue) => prevValue + 4);
+    };
+
     return (
         <section className="mx-10 py-8 relative z-1">
             <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:gap-10 md:gap-8 xs:gap-1 sm:gap-7 justify-center drop-shadow-2xl">
-                {UpcomingMoviesList.slice(3, 11).map((UpcomingMovie) => (
+                {UpcomingMoviesList.slice(0, loadMore).map((UpcomingMovie) => (
                     <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-90">
                         <div
                             className="xl:w-[320px] xl:h-[475px] sm:w-[320px] sm:h-[475px]  xs:w-[320px] xs:h-[400px] rounded-2xl text-white relative group overflow-hidden"
@@ -71,6 +76,15 @@ export default function UpcomingMovies() {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            <div className="flex justify-center my-5 ">
+                <button
+                    className={`py-3 px-8 w-44 text-lg shadow-2xl rounded-md bg-white hover:bg-sweetpurple hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
+                    onClick={ShowMoreFilms}
+                >
+                    Load more
+                </button>
             </div>
         </section>
     );
