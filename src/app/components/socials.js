@@ -28,7 +28,7 @@ export default function SocialsIcons() {
                 <a key={alt} href={href} target="_blank">
                     <Image
                         src={src}
-                        className="size-8 sm:size-8 xs:size-6  xl:hover:scale-110 transition ease-in-out duration-300"
+                        className="size-8 sm:size-8 xs:size-5  xl:hover:scale-110 transition ease-in-out duration-300"
                         alt={alt}
                         height={33}
                         width={33}
