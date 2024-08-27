@@ -23,7 +23,7 @@ const socialLinks = [
 
 export default function SocialsIcons() {
     return (
-        <div className="flex absolute xl:gap-5 xs:gap-2 xl:right-8 xl:top-6 sm:right-8 sm:top-6 xs:right-1 xs:top-1 xs:p-1 z-20">
+        <div className="flex absolute xl:gap-5 xs:gap-3 xl:right-8 xl:top-6 sm:right-8 sm:top-6 xs:right-1 xs:top-1 xs:p-1 z-20">
             {socialLinks.map(({ href, src, alt }) => (
                 <a key={alt} href={href} target="_blank">
                     <Image

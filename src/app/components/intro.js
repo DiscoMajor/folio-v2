@@ -4,7 +4,7 @@ const montagu = Montagu_Slab({ subsets: ["latin"], display: "swap", adjustFontFa
 export default function MyName() {
     return (
         <h1
-            className={`text-center xl:text-9xl sm:text-7xl xs:text-4xl lg:mx-20 sm:mx-16  lg:py-12 sm:py-12 xs:py-12  animate__animated animate__fadeInDown ${montagu.className}`}
+            className={`text-center xl:text-9xl sm:text-7xl xs:text-4xl lg:mx-20 sm:mx-16  lg:py-12 sm:py-12 xs:py-14  animate__animated animate__fadeInDown ${montagu.className}`}
         >
             Victor Lobbé
         </h1>
