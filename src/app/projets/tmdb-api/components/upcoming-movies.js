@@ -80,7 +80,7 @@ export default function UpcomingMovies() {
 
             <div className="flex justify-center my-5 ">
                 <button
-                    className={`py-3 px-8 w-44 text-lg shadow-2xl rounded-md bg-white hover:bg-sweetpurple hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
+                    className={`py-2 w-40 text-lg border-2 shadow-2xl text-slate-200 rounded-md  hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
                     onClick={ShowMoreFilms}
                 >
                     Load more
