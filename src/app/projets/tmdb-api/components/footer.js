@@ -7,7 +7,7 @@ const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 export default function Footer() {
     return (
         <section className="footer-fade">
-            <div className={`flex flex-col items-center justify-center p-5 text-white ${abel.className}`}>
+            <div className={`flex flex-col items-center justify-center p-1 text-white ${abel.className}`}>
                 <div>
                     <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-32 md:size-36 xs:size-24" />
                 </div>

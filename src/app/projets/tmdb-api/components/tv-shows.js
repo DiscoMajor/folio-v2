@@ -65,7 +65,7 @@ export default function Tvshow() {
 
     return (
         <div className="mb-3">
-            <div className="text-center flex flex-col gap-3 p-10 my-5 text-white">
+            <div className="text-center flex flex-col gap-3 p-1 my-5 text-white">
                 <h1 className={`xl:text-6xl md:text-4xl xs:text-3xl ${abel.className}`}>More into TV Shows?</h1>
                 <p className="xl:text-xl md:text-xl sm:text-md xs:text-sm">There is a quick selection of most popular shows right now</p>
             </div>
@@ -97,7 +97,10 @@ export default function Tvshow() {
                 </div>
 
                 <div className="flex justify-between mt-4">
-                    <button onClick={prevPage} className="p-1 bg-opacity-20 contrast-200 drop-shadow-4xl rounded absolute top-52 left-0">
+                    <button
+                        onClick={prevPage}
+                        className="p-3 ml-1 bg-opacity-20 contrast-200 drop-shadow-4xl rounded absolute top-48 left-0"
+                    >
                         <Image
                             src={ArrowBack}
                             alt="Previous"
@@ -107,7 +110,10 @@ export default function Tvshow() {
                         />
                     </button>
 
-                    <button onClick={nextPage} className="p-1 bg-opacity-20 contrast-200 drop-shadow-4xl rounded absolute top-52 right-0">
+                    <button
+                        onClick={nextPage}
+                        className="p-3 mr-1 bg-opacity-20 contrast-200 drop-shadow-4xl rounded absolute top-48 right-0"
+                    >
                         <Image
                             src={ArrowForward}
                             alt="Next"
