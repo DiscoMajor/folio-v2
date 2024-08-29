@@ -14,9 +14,9 @@ export default function Movie() {
 
             <Header></Header>
 
-            {/* <Hero></Hero> */}
+            <Hero></Hero>
 
-            <DiscoverMoviesCarousel />
+            {/* <DiscoverMoviesCarousel /> */}
 
             <UpcomingMovies />
 

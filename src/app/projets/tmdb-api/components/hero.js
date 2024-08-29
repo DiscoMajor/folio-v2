@@ -59,7 +59,7 @@ const Carousel = () => {
     }
 
     return (
-        <section className="absolute inset-0 z-40 xl:h-screen xs:h-[500px]">
+        <section className="relative inset-0 z-40 xl:h-screen md:h-[700px] xs:h-[500px] blur-hero">
             <div className="relative h-full">
                 <div key={discoverMovieList.id} className="absolute inset-0 h-full">
                     <div className="carousel h-full">
@@ -81,7 +81,7 @@ const Carousel = () => {
                                 {discoverMovieList[currentIndex].overview}
                             </p>
 
-                            <div className={`absolute bottom-12 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
+                            <div className={`absolute bottom-12 z-50 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
                                 <p>
                                     📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
                                     {discoverMovieList[currentIndex].vote_average.toFixed(1)} - 🎭{" "}

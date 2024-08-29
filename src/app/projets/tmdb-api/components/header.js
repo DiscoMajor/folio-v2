@@ -8,7 +8,7 @@ const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
 export default function Header() {
     return (
-        <section className="header-fade relative z-50 w-full">
+        <section className="header-fade absolute top-0 z-50 w-full">
             <header className="p-1 xl:mx-8 sm:mx-5 xs:mx-2 text-center">
                 <nav className={`flex justify-between items-center ${abel.className} text-white xl:text-xl md:text-lg xs:text-xs`}>
                     <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
@@ -18,10 +18,10 @@ export default function Header() {
                             <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
                                 <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">Home</li>
                                 <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
-                                    Discover Section
+                                    Upcoming Films
                                 </li>
                                 <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
-                                    Upcoming Films
+                                    Popular TV Shows
                                 </li>
                             </ul>
                         </section>

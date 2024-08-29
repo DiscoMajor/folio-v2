@@ -47,7 +47,7 @@
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-/* Cards INDEX FIRST FOLIO PAGE*/
+/* Cards INDEX FOLIO*/
 
 .card {
     max-width: 385px;
@@ -166,6 +166,15 @@
     .burger-menu-logos {
         display: none;
     }
+}
+
+/* Carousel first "Discover section" */
+
+.blur-hero {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(0deg, transparent, white);
+    mask: linear-gradient(0deg, transparent, white 20%);
+    z-index: 0;
 }
 
 /* UPCOMING SECTION CARDS */
