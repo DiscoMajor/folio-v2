@@ -5,6 +5,7 @@ import UpcomingMovies from "./components/upcoming-movies.js";
 import Tvshows from "./components/tv-shows.js";
 import Header from "@/app/projets/tmdb-api/components/header.js";
 import Footer from "./components/footer.js";
+import Hero from "./components/hero.js";
 
 export default function Movie() {
     return (
@@ -12,6 +13,8 @@ export default function Movie() {
             <Analytics />
 
             <Header></Header>
+
+            {/* <Hero></Hero> */}
 
             <DiscoverMoviesCarousel />
 

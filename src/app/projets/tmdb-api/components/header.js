@@ -8,11 +8,11 @@ const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
 export default function Header() {
     return (
-        <section className="header-fade">
-            <header className="relative p-1 xl:mx-8 sm:mx-5 xs:mx-2 text-center">
+        <section className="header-fade relative z-50 w-full">
+            <header className="p-1 xl:mx-8 sm:mx-5 xs:mx-2 text-center">
                 <nav className={`flex justify-between items-center ${abel.className} text-white xl:text-xl md:text-lg xs:text-xs`}>
                     <div className="flex items-center xl:gap-16 md:gap-10 xs:gap-8 ">
-                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-28 md:size-24 xs:size-14 " />
+                        <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-24 md:size-24 xs:size-14 " />
                         <BurgerMenu></BurgerMenu>
                         <section className="nav-menu">
                             <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
