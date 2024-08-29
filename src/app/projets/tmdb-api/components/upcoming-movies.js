@@ -7,7 +7,7 @@ const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 export default function UpcomingMovies() {
     const [UpcomingMoviesList, setUpcomingMoviesList] = useState([]);
     const [genresList, setGenresList] = useState([]);
-    const [loadMore, setLoadMore] = useState(4);
+    const [loadMore, setLoadMore] = useState(8);
 
     useEffect(() => {
         const getUpcoming = async () => {
@@ -49,7 +49,7 @@ export default function UpcomingMovies() {
                 Find a must-watch movie.
             </h1>
             <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-10 md:gap-8 xs:gap-1 sm:gap-7 justify-center drop-shadow-2xl">
-                {UpcomingMoviesList.slice(0, loadMore).map((UpcomingMovie) => (
+                {UpcomingMoviesList.slice(4, loadMore).map((UpcomingMovie) => (
                     <div key={UpcomingMovie.id} className="flex flex-col flex-wrap gap-2 items-center xl:scale-90 md:scale-90 xs:scale-90">
                         <div
                             className="xl:w-[320px] xl:h-[475px] sm:w-[320px] sm:h-[475px]  xs:w-[320px] xs:h-[400px] rounded-2xl text-white relative group overflow-hidden"
