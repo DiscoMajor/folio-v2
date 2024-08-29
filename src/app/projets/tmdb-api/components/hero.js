@@ -82,7 +82,7 @@ const Carousel = () => {
                             </p>
 
                             <div
-                                className={`absolute bottom-24 z-50 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs contrast-200`}
+                                className={`absolute bottom-28 z-50 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs contrast-200`}
                             >
                                 <p>
                                     📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
@@ -115,7 +115,7 @@ const Carousel = () => {
                         </button>
 
                         {/* Indicateurs points carousel */}
-                        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 xl:space-x-2 xs:space-x-1 z-50 contrast-200">
+                        <div className="absolute bottom-[85px] left-1/2 transform -translate-x-1/2 xl:space-x-2 xs:space-x-1 z-50 contrast-200">
                             {discoverMovieList.map((_, index) => (
                                 <button
                                     key={index}
