@@ -76,12 +76,14 @@ const Carousel = () => {
                                 {discoverMovieList[currentIndex].title}
                             </h2>
                             <p
-                                className={`xl:p-20 sm:p-20 xs:p-12 text-justify xl:text-2xl sm:text-base xs:text-base xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
+                                className={`xl:p-20 sm:p-20 xs:p-9 text-justify xl:text-2xl sm:text-base xs:text-sm xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
                             >
                                 {discoverMovieList[currentIndex].overview}
                             </p>
 
-                            <div className={`absolute bottom-12 z-50 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs`}>
+                            <div
+                                className={`absolute bottom-24 z-50 xl:p-5 sm:p-3 xs:p-1 xl:text-base sm:text-sm xs:text-xxs contrast-200`}
+                            >
                                 <p>
                                     📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
                                     {discoverMovieList[currentIndex].vote_average.toFixed(1)} - 🎭{" "}
@@ -113,7 +115,7 @@ const Carousel = () => {
                         </button>
 
                         {/* Indicateurs points carousel */}
-                        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 xl:space-x-2 xs:space-x-1 z-50">
+                        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 xl:space-x-2 xs:space-x-1 z-50 contrast-200">
                             {discoverMovieList.map((_, index) => (
                                 <button
                                     key={index}
