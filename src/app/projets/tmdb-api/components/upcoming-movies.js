@@ -45,7 +45,7 @@ export default function UpcomingMovies() {
 
     return (
         <section className=" pb-5 px-8 relative z-1">
-            <h1 className={`xl:text-7xl md:text-6xl xs:text-4xl p-8 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
+            <h1 className={`xl:text-7xl md:text-6xl xs:text-3xl p-8 mt-2 mb-2 font-bold text-center text-white ${abel.className}`}>
                 Find a must-watch movie.
             </h1>
             <div className="grid justify-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-10 md:gap-8 xs:gap-1 sm:gap-7 justify-center drop-shadow-2xl">

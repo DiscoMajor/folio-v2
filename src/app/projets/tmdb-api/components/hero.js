@@ -57,7 +57,7 @@ const Carousel = () => {
     if (discoverMovieList.length === 0 || genresList.length === 0) {
         return <p className={`text-white text-2xl font-semibold flex justify-center items-center h-96`}>Chargement des données...</p>;
     }
-
+    //ICI JE PEUX CHANGER la taille en h-[850] en XL si je veux faire apparaitre un element d'après pour pousser à descendre
     return (
         <section className="relative inset-0 z-40 xl:h-screen md:h-[700px] xs:h-[500px] blur-hero">
             <div className="relative h-full">
