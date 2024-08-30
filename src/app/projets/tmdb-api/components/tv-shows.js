@@ -81,18 +81,20 @@ export default function Tvshow() {
                     {tvshows.map((show) => (
                         <section
                             key={show.id}
-                            className="carousel-item text-left text-sm"
+                            className="carousel-item text-left text-sm flex flex-col gap-2"
                             style={{ flex: "0 0 auto", width: `${itemWidth}px` }}
                         >
-                            <div className="relative flex flex-col gap-2 h-96">
+                            <div className="relative flex flex-col gap-6 h-96">
                                 <img
                                     src={`${baseImageUrl}${show.poster_path}`}
                                     alt={`Poster for ${show.name}`}
                                     className="h-full w-full object-cover"
                                 />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <h1 className="text-xl font-bold">⭐ {show.vote_average.toFixed(1)}</h1>
-                                    <button className="mt-2 px-4 py-2 bg-sweetpurple text-white rounded">Regarder</button>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <h1 className={`text-xl ${abel.className}`}>⭐ {show.vote_average.toFixed(1)}</h1>
+                                    <a href="https://www.netflix.com/fr/" target="blank">
+                                        <button className="mt-2 px-4 py-2 bg-sweetpurple text-white rounded">Regarder</button>
+                                    </a>
                                 </div>
                             </div>
                             <h1>{show.name}</h1>
