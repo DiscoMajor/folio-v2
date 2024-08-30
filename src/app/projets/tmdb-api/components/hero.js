@@ -81,7 +81,7 @@ const Carousel = () => {
 
                         <div className="absolute  inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
                             <p
-                                className={`xl:p-20 sm:p-20 xs:p-9 text-justify xl:text-2xl sm:text-base xs:text-sm xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
+                                className={`xl:p-40 md:p-28 sm:p-28 xs:p-9 text-justify xl:text-2xl sm:text-base xs:text-sm xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
                             >
                                 {discoverMovieList[currentIndex].overview}
                             </p>
