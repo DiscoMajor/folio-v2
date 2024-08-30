@@ -118,14 +118,14 @@ export default function Tvshow() {
                                     </div>
 
                                     <div className="flex gap-5 absolute bottom-5 left-5">
-                                        <button className="group drop-shadow-6xl">
+                                        <button className="group">
                                             <Image src={PlayIcon} height={18} width={18} alt="play icon" className=" contrast-200 " />
                                             <span className="absolute p-2 w-32 bottom-6 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-gray-700 text-white text-xs">
                                                 Regardez E1
                                             </span>
                                         </button>
 
-                                        <button className="group drop-shadow-6xl">
+                                        <button className="group">
                                             <Image
                                                 src={BookmarkIcon}
                                                 height={18}
@@ -138,7 +138,7 @@ export default function Tvshow() {
                                             </span>
                                         </button>
 
-                                        <button className="relative group drop-shadow-6xl">
+                                        <button className="relative group">
                                             <Image
                                                 src={AddToWatchList}
                                                 height={18}
