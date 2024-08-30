@@ -72,7 +72,7 @@ export default function Tvshow() {
 
             <div className="relative overflow-hidden p-5" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                 <div
-                    className={`flex items-center text-white gap-6 ${abel.className}`}
+                    className={`relative flex items-center text-white gap-6 ${abel.className}`}
                     style={{
                         transform: `translateX(-${currentIndex * itemWidth}px)`,
                         transition: "transform 0.5s ease-in-out",
@@ -84,14 +84,18 @@ export default function Tvshow() {
                             className="carousel-item text-left text-sm"
                             style={{ flex: "0 0 auto", width: `${itemWidth}px` }}
                         >
-                            <div className="flex flex-col gap-2 h-96">
+                            <div className="relative flex flex-col gap-2 h-96">
                                 <img
                                     src={`${baseImageUrl}${show.poster_path}`}
                                     alt={`Poster for ${show.name}`}
                                     className="h-full w-full object-cover"
                                 />
-                                <h1>{show.name}</h1>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <h1 className="text-xl font-bold">⭐ {show.vote_average.toFixed(1)}</h1>
+                                    <button className="mt-2 px-4 py-2 bg-sweetpurple text-white rounded">Regarder</button>
+                                </div>
                             </div>
+                            <h1>{show.name}</h1>
                         </section>
                     ))}
                 </div>
