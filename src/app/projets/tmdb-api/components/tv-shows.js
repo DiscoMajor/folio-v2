@@ -121,7 +121,7 @@ export default function Tvshow() {
                                         <button className="group">
                                             <Image src={PlayIcon} height={18} width={18} alt="play icon" className=" contrast-200 " />
                                             <span className="absolute p-2 w-32 bottom-6 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-gray-700 text-white text-xs">
-                                                Regardez E1
+                                                Watch E1
                                             </span>
                                         </button>
 
