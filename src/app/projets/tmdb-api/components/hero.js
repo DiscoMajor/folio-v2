@@ -57,7 +57,7 @@ const Carousel = () => {
     if (discoverMovieList.length === 0 || genresList.length === 0) {
         return <p className={`text-white text-2xl font-semibold flex justify-center items-center h-96`}>Chargement des données...</p>;
     }
-    //ICI JE PEUX CHANGER la taille en h-[850] en XL si je veux faire apparaitre un element d'après pour pousser à descendre
+
     return (
         <section className="relative inset-0 z-40 xl:h-screen md:h-[700px] xs:h-[500px] blur-hero">
             <div className="relative h-full">
@@ -71,10 +71,15 @@ const Carousel = () => {
                             className="object-cover w-full h-full"
                         />
 
-                        <div className="absolute  inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
-                            <h2 className={`absolute xl:text-6xl sm:text-6xl xs:text-3xl xl:top-36 sm:top-32 xs:top-28 ${bebas.className}`}>
+                        <div className="absolute xl:top-36 md:top-36 sm:top-28 xs:top-24 left-1/2 transform -translate-x-1/2 z-50 drop-shadow-6xl contrast-200 ">
+                            <h2
+                                className={`text-white text-center xl:text-6xl sm:text-6xl xs:text-2xl contrast-200 drop-shadow-6xl  ${bebas.className}`}
+                            >
                                 {discoverMovieList[currentIndex].title}
                             </h2>
+                        </div>
+
+                        <div className="absolute  inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-60 p-2 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
                             <p
                                 className={`xl:p-20 sm:p-20 xs:p-9 text-justify xl:text-2xl sm:text-base xs:text-sm xl:leading-8 xs:leading-4 font-semibold ${abel.className}`}
                             >
