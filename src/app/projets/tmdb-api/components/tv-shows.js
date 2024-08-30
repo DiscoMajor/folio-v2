@@ -3,6 +3,9 @@ import { Abel } from "next/font/google";
 import ArrowForward from "/public/icons/arrow_forward.svg";
 import ArrowBack from "/public/icons/arrow_back.svg";
 import Image from "next/image";
+import BookmarkIcon from "/public/tmdb/icons/bookmark.svg";
+import AddToWatchList from "/public/tmdb/icons/addcross.svg";
+import PlayIcon from "/public/tmdb/icons/play.svg";
 
 const abel = Abel({ subsets: ["latin"], weight: ["400"] });
 
@@ -10,6 +13,7 @@ export default function Tvshow() {
     const [tvshows, setTvShows] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemWidth, setItemWidth] = useState(200);
+    // const [showsDetails, setShowsDetails] = useState([]);
     const itemsPerPage = 1;
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
@@ -20,10 +24,22 @@ export default function Tvshow() {
             const response = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}`);
             const data = await response.json();
             setTvShows(data.results);
-            console.log(data.results);
+            // console.log(`Shows`, data.results);
         };
         getTvshows();
     }, []);
+
+    // Not Working atm i'll check that later
+    //useEffect(() => {
+    //     const getTvshowsDetails = async () => {
+    //         const apiKey = process.env.NEXT_PUBLIC_TMDB;
+    //         const res = await fetch(`https://api.themoviedb.org/3/tv/${series_id}?api_key=${apiKey}`);
+    //         const datadetails = await res.json();
+    //         setShowsDetails(datadetails.results);
+    //         console.log(`TV Shows Details`, datadetails.results);
+    //     };
+    //     getTvshowsDetails();
+    // }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -90,11 +106,51 @@ export default function Tvshow() {
                                     alt={`Poster for ${show.name}`}
                                     className="h-full w-full object-cover"
                                 />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <h1 className={`text-xl ${abel.className}`}>⭐ {show.vote_average.toFixed(1)}</h1>
-                                    <a href="https://www.netflix.com/fr/" target="blank">
-                                        <button className="mt-2 px-4 py-2 bg-sweetpurple text-white rounded">Regarder</button>
-                                    </a>
+                                <div className="absolute inset-0 flex flex-col  items-center justify-center bg-slate-900 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                    <div className={`absolute top-0 left-0 p-2 space-y-2 text-justify ${abel.className}`}>
+                                        <h1 className="text-sm">{show.name}</h1>
+                                        <h1 className="text-sm">
+                                            {show.vote_average.toFixed(1)}⭐({show.vote_count}K)
+                                        </h1>
+                                        <h1 className="text-sm overflow-hidden">
+                                            {show.overview.length > 100 ? show.overview.slice(0, 350) : show.overview}
+                                        </h1>
+                                    </div>
+
+                                    <div className="flex gap-5 absolute bottom-5 left-5">
+                                        <button className="group drop-shadow-6xl">
+                                            <Image src={PlayIcon} height={18} width={18} alt="play icon" className=" contrast-200 " />
+                                            <span className="absolute p-2 w-32 bottom-6 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-gray-700 text-white text-xs">
+                                                Regardez E1
+                                            </span>
+                                        </button>
+
+                                        <button className="group drop-shadow-6xl">
+                                            <Image
+                                                src={BookmarkIcon}
+                                                height={18}
+                                                width={18}
+                                                alt="bookmark icon"
+                                                className=" contrast-200 "
+                                            />
+                                            <span className="absolute p-2 w-32 bottom-6 -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-gray-700 text-white text-xs">
+                                                Add to favorites
+                                            </span>
+                                        </button>
+
+                                        <button className="relative group drop-shadow-6xl">
+                                            <Image
+                                                src={AddToWatchList}
+                                                height={18}
+                                                width={18}
+                                                alt="add to watch later icon"
+                                                className=" contrast-200 "
+                                            />
+                                            <span className="absolute p-2 w-32 bottom-6 left-1/2 transform -translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 bg-gray-700 text-white text-xs text-center">
+                                                Add to watch later
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <h1>{show.name}</h1>
