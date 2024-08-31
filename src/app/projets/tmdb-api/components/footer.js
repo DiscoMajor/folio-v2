@@ -20,9 +20,9 @@ export default function Footer() {
                     </button>
                 </div>
             </div>
-            <div className={`${abel.className} text-white footer-li xl:p-2 sm:p-2 xs:p-2 flex justify-around`}>
+            <div className={`${abel.className} text-white footer-li xl:p-5 sm:p-2 xs:p-2 flex justify-around`}>
                 <div>
-                    <ul className="flex flex-col xl:gap-2 xs:gap-0.2">
+                    <ul className="flex flex-col xl:gap-3 xs:gap-0.2">
                         <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold">The MovieDatabase</h1>
                         <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2 ">
                             <li>
@@ -45,7 +45,7 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <ul>
+                    <ul className="flex flex-col xl:gap-3 xs:gap-0.2">
                         <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold">Contact Us</h1>
                         <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2">
                             <li>
@@ -62,7 +62,7 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <ul className="flex flex-col xl:gap-2 xs:gap-0.5">
+                    <ul className="flex flex-col xl:gap-3 xs:gap-0.2">
                         <h1 className="xl:text-xl md:text-lg xs:text-xs font-bold">Legal</h1>
                         <section className="flex flex-col xl:gap-2 xs:gap-2 xl:text-base md:text-base xs:text-xs mt-2">
                             <li>
