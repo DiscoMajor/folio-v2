@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import BurgerIcon from "/public/tmdb/icons/burger-menu.svg";
 import BurgerMenuClose from "/public/tmdb/icons/burger-close.svg";
 
@@ -26,11 +27,13 @@ export default function BurgerMenu() {
                 <button onClick={toggleMenu} className="absolute top-3 right-3 z-50 drop-shadow-4xl">
                     <Image src={BurgerMenuClose} width={20} height={20} alt="close burger menu" className="size-3" />
                 </button>
-                <section className="flex flex-col items-center justify-between p-5 gap-4 h-70 text-lg drop-shadow-4xl">
-                    <li>Home</li>
-                    <li>Discover Section</li>
-                    <li>Upcoming Films</li>
-                    <li>Notifications</li>
+                <section className="flex flex-col items-center justify-between p-5 gap-3 text-base drop-shadow-4xl">
+                    <Link href="/">
+                        <li>Home</li>
+                        <li>Discover Section</li>
+                        <li>Upcoming Films</li>
+                        <li>Notifications</li>
+                    </Link>
                 </section>
             </ul>
         </section>
