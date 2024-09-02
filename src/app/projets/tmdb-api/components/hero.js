@@ -73,7 +73,7 @@ const Carousel = () => {
                         />
 
                         <div className="absolute xl:top-60 md:top-60 xs:top-24 xl:left-48 md:left-48 xs:left-14 z-50 xl:w-[600px] md:w-[600px] xs:w-[320px] drop-shadow-6xl">
-                            <div className="flex flex-col xl:gap-10 xs:gap-3 md:gap-8 text-left text-white z-50 drop-shadow-6xl">
+                            <div className="flex flex-col xl:gap-10 xs:gap-5 md:gap-8 text-left text-white z-50 drop-shadow-6xl">
                                 <h2 className={`text-white text-left xl:text-6xl sm:text-6xl xs:text-2xl contrast-200  ${bebas.className}`}>
                                     {discoverMovieList[currentIndex].title}
                                 </h2>

@@ -5,7 +5,7 @@ const projects = [
     {
         id: 1,
         name: "tmdb-api",
-        title: "The movie database (en construction)",
+        title: "The movie database",
         description: "Recupération de données via l'API, mise en forme avec Tailwind CSS",
         keyword: "Api - TailWindCSS - React",
         img: "/icons/movie-icon.svg",
