@@ -72,7 +72,7 @@ const Carousel = () => {
                             className="object-cover w-full h-full"
                         />
 
-                        <div className="absolute xl:top-60 md:top-60 xs:top-24 xl:left-48 md:left-48 xs:left-10 z-50 xl:w-[600px] md:w-[600px] xs:w-[300px] drop-shadow-6xl">
+                        <div className="absolute xl:top-60 md:top-60 xs:top-24 xl:left-48 md:left-48 xs:left-14 z-50 xl:w-[600px] md:w-[600px] xs:w-[320px] drop-shadow-6xl">
                             <div className="flex flex-col xl:gap-10 xs:gap-3 md:gap-8 text-left text-white z-50 drop-shadow-6xl">
                                 <h2 className={`text-white text-left xl:text-6xl sm:text-6xl xs:text-2xl contrast-200  ${bebas.className}`}>
                                     {discoverMovieList[currentIndex].title}
@@ -80,7 +80,7 @@ const Carousel = () => {
 
                                 <div className="drop-shadow-6xl">
                                     <p
-                                        className={`max-w-xl xl:text-2xl sm:text-base xs:text-sm leading-normal font-semibold drop-shadow-6xl  ${abel.className}`}
+                                        className={`max-w-xl xl:text-2xl sm:text-base xs:text-xs leading-normal font-semibold drop-shadow-6xl  ${abel.className}`}
                                     >
                                         {discoverMovieList[currentIndex].overview}
                                     </p>
@@ -88,7 +88,7 @@ const Carousel = () => {
 
                                 <div className="flex gap-5">
                                     <button
-                                        className={`xl:p-3 md:p-3 xs:p-2 xl:text-lg xs:text-xxs border-2  text-white rounded-md hover:bg-sweetpurple hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
+                                        className={`xl:p-3 md:p-3 xs:p-1 xl:text-lg xs:text-xxs border-2  text-white rounded-md hover:bg-sweetpurple hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
                                     >
                                         Watch Now
                                     </button>
@@ -100,7 +100,7 @@ const Carousel = () => {
                                     </button>
                                 </div>
 
-                                <p className={`mt-5 xl:text-base sm:text-sm xs:text-xxs contrast-200 drop-shadow-6xl`}>
+                                <p className={` xl:text-base sm:text-sm xs:text-xxs contrast-200 drop-shadow-6xl`}>
                                     📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
                                     {discoverMovieList[currentIndex].vote_average.toFixed(1)} - 🎭{" "}
                                     {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
