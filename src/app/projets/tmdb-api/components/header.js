@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link.js";
 import SiteLogo from "/public/tmdb/icons/tmdb-logo.svg";
 import AccountLogo from "/public/tmdb/icons/account.svg";
 import NotificationLogo from "/public/tmdb/icons/bell.svg";
@@ -15,15 +16,17 @@ export default function Header() {
                         <Image src={SiteLogo} alt="Website Logo" priority className="xl:size-24 md:size-24 xs:size-14 " />
                         <BurgerMenu></BurgerMenu>
                         <section className="nav-menu">
-                            <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
-                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">Home</li>
-                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
-                                    Upcoming Films
-                                </li>
-                                <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
-                                    Popular TV Shows
-                                </li>
-                            </ul>
+                            <Link href="/">
+                                <ul className="flex items-center xl:gap-16 md:gap-10 xs:gap-3">
+                                    <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">Home</li>
+                                    <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
+                                        Upcoming Films
+                                    </li>
+                                    <li className="hover:text-sweetpurple hover:scale-105 transition ease-in-out duration-300">
+                                        Popular TV Shows
+                                    </li>
+                                </ul>
+                            </Link>
                         </section>
                     </div>
 
