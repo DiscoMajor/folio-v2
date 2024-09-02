@@ -80,7 +80,7 @@ const Carousel = () => {
 
                                 <div className="drop-shadow-6xl">
                                     <p
-                                        className={`max-w-xl xl:text-2xl sm:text-base xs:text-xs leading-normal font-semibold drop-shadow-6xl  ${abel.className}`}
+                                        className={`text-justify xl:text-2xl sm:text-base xs:text-xs leading-normal font-semibold drop-shadow-6xl  ${abel.className}`}
                                     >
                                         {discoverMovieList[currentIndex].overview}
                                     </p>
