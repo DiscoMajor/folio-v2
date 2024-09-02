@@ -72,21 +72,23 @@ const Carousel = () => {
                             className="object-cover w-full h-full"
                         />
 
-                        <div className="absolute xl:top-60 md:top-52 xs:top-24 xl:left-48 md:left-24 xs:left-10 z-50 xl:w-[600px] md:w-[600px] xs:w-[320px] drop-shadow-6xl">
-                            <div className="flex flex-col xl:gap-10 xs:gap-5 md:gap-8 text-left text-white z-50 drop-shadow-6xl">
-                                <h2 className={`text-white text-left xl:text-6xl sm:text-6xl xs:text-2xl contrast-200  ${bebas.className}`}>
+                        <div className="absolute xl:top-60 md:top-52 xs:top-24 xl:left-48 md:left-24 xs:left-10 z-50 xl:w-[600px] md:w-[600px] xs:w-[320px] text-shadow drop-shadow-3xl">
+                            <div className="flex flex-col xl:gap-10 xs:gap-5 md:gap-8 text-left text-white z-50">
+                                <h2
+                                    className={`text-white text-left xl:text-6xl sm:text-6xl xs:text-2xl ${bebas.className} enhanced-text-shadow`}
+                                >
                                     {discoverMovieList[currentIndex].title}
                                 </h2>
 
-                                <div className="drop-shadow-6xl">
+                                <div>
                                     <p
-                                        className={`text-justify xl:pr-0 md:pr-0 sm:pr-0 xs:pr-8 xl:text-2xl sm:text-base xs:text-xs leading-normal font-semibold drop-shadow-6xl  ${abel.className}`}
+                                        className={`text-justify xl:pr-0 md:pr-0 sm:pr-0 xs:pr-8 xl:text-2xl sm:text-base xs:text-xs leading-normal font-semibold enhanced-text-shadow ${abel.className}`}
                                     >
                                         {discoverMovieList[currentIndex].overview}
                                     </p>
                                 </div>
 
-                                <div className="flex gap-5">
+                                <div className="flex gap-5 text-shadow">
                                     <button
                                         className={`xl:p-3 md:p-3 xs:p-1 xl:text-lg xs:text-xxs border-2  text-white rounded-md hover:bg-sweetpurple hover:scale-105 transform ease-in-out duration-300 ${abel.className}`}
                                     >
@@ -100,7 +102,7 @@ const Carousel = () => {
                                     </button>
                                 </div>
 
-                                <p className={` xl:text-base sm:text-sm xs:text-xxs contrast-200 drop-shadow-6xl`}>
+                                <p className={`xl:text-base sm:text-sm xs:text-xxs enhanced-text-shadow`}>
                                     📅 {discoverMovieList[currentIndex].release_date} - ⭐{" "}
                                     {discoverMovieList[currentIndex].vote_average.toFixed(1)} - 🎭{" "}
                                     {getGenreNames(discoverMovieList[currentIndex].genre_ids).join(", ")}
@@ -108,7 +110,6 @@ const Carousel = () => {
                             </div>
                         </div>
 
-                        {/* Bouton gauche carousel */}
                         <button className="p-3 absolute left-0 top-1/2 transform -translate-y-1/2 z-50 " onClick={handlePrev}>
                             <Image
                                 src={ArrowBack}
@@ -119,7 +120,6 @@ const Carousel = () => {
                             />
                         </button>
 
-                        {/* Bouton droit carousel */}
                         <button className="p-3 absolute right-0 top-1/2 transform -translate-y-1/2 z-50" onClick={handleNext}>
                             <Image
                                 src={ArrowForward}

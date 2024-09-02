@@ -204,3 +204,12 @@
         color: #aca7f1;
     }
 }
+
+.text-shadow {
+    text-shadow: 0px 0px 29px rgba(0, 0, 0, 1);
+}
+
+.enhanced-text-shadow {
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8), 0px 2px 4px rgba(0, 0, 0, 0.6), 0px 4px 8px rgba(0, 0, 0, 0.4),
+        0px 8px 16px rgba(0, 0, 0, 0.2);
+}
