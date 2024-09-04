@@ -216,26 +216,7 @@
 
 /* AI CHAT BOT, DREAM DRAWER */
 
-ul {
-    margin-bottom: 32px;
-}
-
-label {
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-fieldset {
-    padding: 0;
-    border: 0;
-}
-
-li {
-    list-style-type: none;
-    margin-bottom: 24px;
-}
-
-input {
+.input-ai {
     display: flex;
     margin-top: 5px;
     width: 320px;
@@ -246,8 +227,8 @@ input {
     font-size: 24px;
 }
 
-button {
-    background-color: #15a739;
+.button-ai {
+    background-color: #168632;
     color: white;
     font-size: 16px;
     border: none;
@@ -258,17 +239,6 @@ button {
     text-transform: uppercase;
 }
 
-button:hover {
-    background-color: #4cca76;
-}
-
-form a {
-    display: inline-flex;
-    margin-top: 32px;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    color: gold;
-    font-size: 16px;
+.button-ai:hover {
+    background-color: #36c265;
 }
