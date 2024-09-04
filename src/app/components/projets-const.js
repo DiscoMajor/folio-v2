@@ -12,7 +12,7 @@ const projects = [
     },
     // {
     //     id: 2,
-    //     name: "chat-bot",
+    //     name: "dream-drawer",
     //     title: "AI Dream drawer",
     //     description: "Dessinateur de rêves via AI using Opein AI Apis. Firebase as DB",
     //     keyword: "API - AI - Node.JS - FireBase",
