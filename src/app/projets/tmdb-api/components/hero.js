@@ -56,7 +56,7 @@ const Carousel = () => {
     };
 
     if (discoverMovieList.length === 0 || genresList.length === 0) {
-        return <p className={`text-white text-2xl font-semibold flex justify-center items-center h-96`}>Chargement des données...</p>;
+        return <p className={`text-white text-2xl font-semibold flex justify-center items-center h-screen`}>Chargement des données...</p>;
     }
 
     return (
