@@ -10,20 +10,20 @@ const projects = [
         keyword: "Api - TailWindCSS - React",
         img: "/icons/movie-icon.svg",
     },
-    // ,
     // {
     //     id: 2,
-    //     name: "bibliotheque-crud",
-    //     title: "Bibliothèque de livres",
-    //     description: "Gestion CRUD, Filtrage des recherches",
-    //     keyword: "#NodeJs",
-    //     img: "/icons/book-icon.svg",
+    //     name: "chat-bot",
+    //     title: "AI Dream drawer",
+    //     description: "Dessinateur de rêves via AI using Opein AI Apis. Firebase as DB",
+    //     keyword: "API - AI - Node.JS - FireBase",
+    //     img: "/icons/sleep-time.svg",
     // },
+    ,
 ];
 
 const Projects = () => {
     return (
-        <div className="flex flex-col gap-6 xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
+        <div className="flex flex-wrap  gap-8 xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12">
             {projects.map((projet) => (
                 <ProjectCard
                     key={projet.id}
