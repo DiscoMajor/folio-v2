@@ -9,7 +9,7 @@ export default function Alternance() {
             <div className="xl:mx-60 lg:mx-52 md:mx-28 sm:mx-11 xs:mx-2 p-12 ">
                 <p className="xl:text-2xl sm:text-xl xs:text-md xl:leading-10 xs:leading-6">
                     Développeur Full Stack en alternance chez SOLARIOHM ☀️ en tant que Concepteur d'applications. Solariohm est une
-                    entreprise engagée dans le secteur des énergies renouvelables 🌱
+                    entreprise engagée dans l'évaluation de vos projets photovoltaïques 🌱
                 </p>
             </div>
 
